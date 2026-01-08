@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /**
-     * Handle click on navigation links
+     * Handle click on navigation    links
      * @param {Event} e - Click event
      */
     function handleNavClick(e) {
@@ -592,8 +592,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     e.preventDefault()
                     smoothScrollTo(href)
                 }
+
+                // if(href.contains("services") && (this.classList.contains("service-option-link") || this.classList.contains("service-card-link"))) {
+                //
+                // }
             })
         })
+
+
 
         // Testimonials navigation
         if (elements.testimonialsPrev) {
@@ -669,6 +675,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Log initialization (remove in production)
         console.log("Networkth365 website initialized successfully!")
+
     }
 
     // Start the application

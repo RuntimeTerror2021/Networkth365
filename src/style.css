@@ -509,8 +509,18 @@ section {
     color: var(--color-secondary);
 }
 
-.header.is-scrolled .logo-accent {
+.logo-accent.dark {
     color: var(--color-primary);
+}
+
+.header.is-scrolled .logo-accent {
+    /*color: var(--color-primary);*/
+    color: var(--color-secondary);
+
+}
+
+.header.is-scrolled .logo-accent.dark {
+    color: #1f8000;
 }
 
 /* Navigation Menu */
@@ -1329,7 +1339,7 @@ section.partners .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #25D366;
+    background: #075E54;
     border-radius: var(--radius-lg);
     padding: 0 var(--space-4);
     transition: all var(--transition-base)
