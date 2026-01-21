@@ -395,24 +395,30 @@ document.addEventListener("DOMContentLoaded", () => {
         const requiredFields = form.querySelectorAll("[required]")
 
         requiredFields.forEach((field) => {
+            field.name = field.name === undefined? "captcha" : field.name;
             const errorElement = document.getElementById(`${field.name}-error`)
             let fieldValid = true
             let errorMessage = ""
 
             // Check if field is empty
-            if (!field.value.trim()) {
+            if(field.name !== "captcha") {
+                if (!field.value.trim()) {
+                    fieldValid = false
+                    errorMessage = "This field is required"
+                }
+                // Email validation
+                else if (field.type === "email" && !isValidEmail(field.value)) {
+                    fieldValid = false
+                    errorMessage = "Please enter a valid email address"
+                }
+                // Phone validation
+                else if (field.type === "tel" && !isValidPhone(field.value)) {
+                    fieldValid = false
+                    errorMessage = "Please enter a valid phone number"
+                }
+            } else if (!elements.contactForm.querySelector('textarea[name=h-captcha-response]').value) {
                 fieldValid = false
-                errorMessage = "This field is required"
-            }
-            // Email validation
-            else if (field.type === "email" && !isValidEmail(field.value)) {
-                fieldValid = false
-                errorMessage = "Please enter a valid email address"
-            }
-            // Phone validation
-            else if (field.type === "tel" && !isValidPhone(field.value)) {
-                fieldValid = false
-                errorMessage = "Please enter a valid phone number"
+                errorMessage = "Please fill out captcha field"
             }
 
             // Update field styling
@@ -440,7 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleContactFormSubmit(e) {
         e.preventDefault()
 
-        if (!validateForm(elements.contactForm) || document.getElementById("checkbox").getAttribute("aria-checked") === "false") {
+        if (!validateForm(elements.contactForm)) {
             return
         }
 
