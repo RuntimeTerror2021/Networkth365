@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
      * @returns {boolean} - True if valid email format
      */
     function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        const emailRegex = /^[^\s@]+@[^\s@]+[^\s@]+[^\s@]+\.[^\s@]+[^\s@]+[^\s@]+$/
         return emailRegex.test(email)
     }
 
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Remove all non-numeric characters
         const cleaned = phone.replace(/\D/g, "")
         // Check if it's between 10-15 digits
-        return cleaned.length >= 10 && cleaned.length <= 15
+        return cleaned.length === 10;
     }
 
     /* ========================================
@@ -440,44 +440,69 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleContactFormSubmit(e) {
         e.preventDefault()
 
-        if (!validateForm(elements.contactForm)) {
+        if (!validateForm(elements.contactForm) || document.getElementById("checkbox").getAttribute("aria-checked") === "false") {
             return
         }
 
         // Get submit button
+        const form = elements.contactForm;
         const submitBtn = elements.contactForm.querySelector('button[type="submit"]')
 
         // Show loading state
         submitBtn.classList.add("is-loading")
         submitBtn.disabled = true
 
-        // Simulate form submission (replace with actual form handling)
-        // In production, you would send data to your server or a service like Formspree
-        setTimeout(() => {
+        setTimeout( async () => {
             // Hide loading state
-            submitBtn.classList.remove("is-loading")
-            submitBtn.disabled = false
 
+            const formData = new FormData(form)
+            formData.append("access_key", "d5fe2ecc-7cbc-432c-b752-a24f49f46c92");
 
-            //TODO: add actual submit func here (formspree or an email handler)
-            // Show success message
-
-            var name = document.getElementById("contact-name").value
-            var email = document.getElementById("contact-email").value
             var phone = document.getElementById("contact-phone").value
-            var service = document.getElementById(document.getElementById("contact-service").value+"-opt").innerText
-            var message = document.getElementById("contact-message").value
-
             phone = `(${phone.substring(0,3)}) ${phone.substring(3,6)}-${phone.substring(6)}`;
 
-            const body = `Hi Nish,%0D%0AI am writing to ask you about ${service}.%0D%0AHere's my message:
-            %0D%0A${message}
-            %0D%0A%0D%0A–${name} [${email}; ${phone}]`
+            formData.set("phone", phone);
 
-            // location.href = `mailto:networkth365@gmail.com?subject=${subject}&body=${body}`;
-            window.open(`mailto:networkth365@gmail.com?subject=Message%20From%20Networkth365%20Homepage&body=${body}`, "_blank")
-            
-            elements.formSuccess.classList.add("is-visible")
+
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    elements.formSuccess.classList.add("is-visible")
+                    submitBtn.classList.remove("is-loading")
+                    submitBtn.disabled = false
+                    document.getElementById("emptyopt").removeAttribute("disabled")
+                    form.reset();
+                } else {
+                    alert("Error: " + data.message);
+                    submitBtn.classList.remove("is-loading")
+                    submitBtn.disabled = false
+                    document.getElementById("emptyopt").removeAttribute("disabled")
+                }
+
+            } catch (error) {
+                alert("Something went wrong. Please try again.");
+            }
+
+            // var name = document.getElementById("contact-name").value
+            // var email = document.getElementById("contact-email").value
+            // var service = document.getElementById(document.getElementById("contact-service").value+"-opt").innerText
+            // var message = document.getElementById("contact-message").value
+            //
+            //
+            // const body = `Hi Nish,%0D%0AI am writing to ask you about ${service}.%0D%0AHere's my message:
+            // %0D%0A${message}
+            // %0D%0A%0D%0A–${name} [${email}; ${phone}]`
+            //
+            // // location.href = `mailto:networkth365@gmail.com?subject=${subject}&body=${body}`;
+            // window.open(`mailto:networkth365@gmail.com?subject=Message%20From%20Networkth365%20Homepage&body=${body}`, "_blank")
+            //
+
 
             // Reset form
             elements.contactForm.reset()
@@ -485,7 +510,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Hide success message after 5 seconds
             setTimeout(() => {
                 elements.formSuccess.classList.remove("is-visible")
-            }, 5000)
+            }, 60000)
         }, 1500)
     }
 
@@ -680,4 +705,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Start the application
     init()
+})
+
+document.getElementById("contact-service").addEventListener("change", () => {
+    document.getElementById("emptyopt").setAttribute("disabled", "true")
+})
+
+
+window.addEventListener("beforeunload", () => {
+    document.getElementById("contact-form").reset()
+
+    document.getElementById("emptyopt").removeAttribute("disabled")
 })
