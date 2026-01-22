@@ -694,7 +694,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function init() {
         // Set current year in footer
         if (elements.currentYear) {
-            elements.currentYear.textContent = new Date().getFullYear()
+            elements.currentYear.textContent = new Date().getFullYear().toString()
         }
 
         // Run initial checks
@@ -704,8 +704,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Initialize event listeners
         initEventListeners()
 
-        // Log initialization (remove in production)
-        console.log("Networkth365 website initialized successfully!")
 
     }
 
@@ -715,6 +713,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("contact-service").addEventListener("change", () => {
     document.getElementById("emptyopt").setAttribute("disabled", "true")
+})
+
+var phoneInput = document.getElementById("contact-phone")
+
+phoneInput.addEventListener("change", () => {
+    var regex = /^\\d+$/
+
+
 })
 
 
