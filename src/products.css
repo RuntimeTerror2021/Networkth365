@@ -1,0 +1,5 @@
+
+header .logo-text,
+header .nav-item .nav-link{
+	color: var(--color-primary);
+}

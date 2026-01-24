@@ -1,0 +1,276 @@
+/* ========================================
+   NETWORKTH365 - MAIN STYLESHEET
+   ========================================
+   Table of Contents:
+   1. CSS Custom Properties (Variables)
+   2. CSS Reset & Base Styles
+   3. Typography
+   4. Layout & Container
+   5. Buttons & Links
+   6. Header & Navigation
+   7. Hero Section
+   8. Services Section
+   9. About Section
+   10. Statistics Section
+   11. Partners Section
+   12. Testimonials Section
+   13. CTA Section
+   14. Contact Section
+   15. Sticky Widget
+   16. Footer
+   17. Animations & Keyframes
+   18. Utility Classes
+   19. Media Queries (Responsive)
+   ======================================== */
+
+/* ========================================
+   1. CSS CUSTOM PROPERTIES (VARIABLES)
+   ========================================
+
+*/
+:root {
+	/* Color Palette - Navy Blue, White, Black */
+	--color-primary: #222B68; /* Deep Navy Blue - Main brand color */
+	--color-primary-dark: #1a2255; /* Darker Navy - For hover states */
+	--color-primary-light: #29347c; /* Lighter Navy - For accents */
+	--color-secondary: #2394CB; /* Medium Blue - Secondary elements */
+
+	--color-white: #ffffff; /* Pure White */
+	--color-black: #000000; /* Pure Black */
+	--color-gray-50: #f8fafc; /* Very Light Gray - Backgrounds */
+	--color-gray-100: #f1f5f9; /* Light Gray - Alt backgrounds */
+	--color-gray-200: #e2e8f0; /* Gray - Borders */
+	--color-gray-300: #cbd5e1; /* Medium Gray - Disabled states */
+	--color-gray-400: #94a3b8; /* Dark Gray - Placeholder text */
+	--color-gray-500: #64748b; /* Darker Gray - Secondary text */
+	--color-gray-600: #475569; /* Very Dark Gray - Body text */
+	--color-gray-700: #334155; /* Near Black - Headings */
+	--color-gray-800: #1e293b; /* Almost Black */
+	--color-gray-900: #0f172a; /* Near Pure Black */
+
+	/* Semantic Colors */
+	--color-success: #10b981; /* Green - Success states */
+	--color-error: #ef4444; /* Red - Error states */
+	--color-warning: #f59e0b; /* Yellow - Warning states */
+
+	/* Gradients */
+	--gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+	--gradient-hero: linear-gradient(
+			135deg,
+			var(--color-primary-dark) 0%,
+			var(--color-primary) 50%,
+			var(--color-secondary) 100%
+	);
+
+	/* Typography */
+	--font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-family-heading: var(--font-family-base);
+
+	--font-size-xs: 0.75rem; /* 12px */
+	--font-size-sm: 0.875rem; /* 14px */
+	--font-size-base: 1rem; /* 16px */
+	--font-size-lg: 1.125rem; /* 18px */
+	--font-size-xl: 1.25rem; /* 20px */
+	--font-size-2xl: 1.5rem; /* 24px */
+	--font-size-3xl: 1.875rem; /* 30px */
+	--font-size-4xl: 2.25rem; /* 36px */
+	--font-size-5xl: 3rem; /* 48px */
+	--font-size-6xl: 3.75rem; /* 60px */
+
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	--font-weight-extrabold: 800;
+
+	--line-height-tight: 1.25;
+	--line-height-base: 1.5;
+	--line-height-relaxed: 1.625;
+
+	/* Spacing Scale (8px base) */
+	--space-1: 0.25rem; /* 4px */
+	--space-2: 0.5rem; /* 8px */
+	--space-3: 0.75rem; /* 12px */
+	--space-4: 1rem; /* 16px */
+	--space-5: 1.25rem; /* 20px */
+	--space-6: 1.5rem; /* 24px */
+	--space-8: 2rem; /* 32px */
+	--space-10: 2.5rem; /* 40px */
+	--space-12: 3rem; /* 48px */
+	--space-16: 4rem; /* 64px */
+	--space-20: 5rem; /* 80px */
+	--space-24: 6rem; /* 96px */
+
+	/* Border Radius */
+	--radius-sm: 0.25rem; /* 4px */
+	--radius-md: 0.5rem; /* 8px */
+	--radius-lg: 0.75rem; /* 12px */
+	--radius-xl: 1rem; /* 16px */
+	--radius-2xl: 1.5rem; /* 24px */
+	--radius-full: 9999px; /* Pill shape */
+
+	/* Shadows */
+	--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	--shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+	/* Transitions */
+	--transition-fast: 150ms ease;
+	--transition-base: 300ms ease;
+	--transition-slow: 500ms ease;
+
+	/* Z-Index Scale */
+	--z-dropdown: 100;
+	--z-sticky: 200;
+	--z-fixed: 300;
+	--z-modal: 400;
+	--z-tooltip: 500;
+
+	/* Container */
+	--container-max: 1200px;
+	--container-padding: var(--space-4);
+}
+
+/* ========================================
+   2. CSS RESET & BASE STYLES
+   ======================================== */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: var(--font-family-base);
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--line-height-base);
+	color: var(--color-gray-600);
+	background-color: var(--color-white);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+address {
+	font-style: normal;
+}
+
+/* Remove default focus outline and add custom */
+:focus {
+	outline: none;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* ========================================
+   3. TYPOGRAPHY
+   ======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-heading) serif;
+	font-weight: var(--font-weight-bold);
+	line-height: var(--line-height-tight);
+	color: var(--color-gray-900);
+}
+
+h1 {
+	font-size: var(--font-size-4xl);
+}
+
+h2 {
+	font-size: var(--font-size-3xl);
+}
+
+h3 {
+	font-size: var(--font-size-2xl);
+}
+
+h4 {
+	font-size: var(--font-size-xl);
+}
+
+h5 {
+	font-size: var(--font-size-lg);
+}
+
+h6 {
+	font-size: var(--font-size-base);
+}
+
+p {
+	margin-bottom: var(--space-4);
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+/* Text gradient utility */
+.text-gradient {
+	background: linear-gradient(to right, white, /*var(--color-secondary),*/lightgreen);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}

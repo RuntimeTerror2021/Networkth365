@@ -686,6 +686,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         })
+
+        document.getElementById("contact-service").addEventListener("change", () => {
+            document.getElementById("emptyopt").setAttribute("disabled", "true")
+        })
+
+        var phoneInput = document.getElementById("contact-phone")
+
+        phoneInput.addEventListener("change", () => {
+            var regex = /^\\d+$/
+
+            phoneInput.value = phoneInput.value.replace(regex, "")
+
+        })
+
+
+        window.addEventListener("beforeunload", () => {
+            document.getElementById("contact-form").reset()
+
+            document.getElementById("emptyopt").removeAttribute("disabled")
+        })
+
+        let mobileNavLis = document.querySelectorAll(".nav-item")
+
+        mobileNavLis.forEach(el => {
+            el.addEventListener("click", (e) => {
+                e.preventDefault()
+                let link = el.querySelector('.nav-link')
+                link.click();
+
+            })
+        })
     }
 
     /**
@@ -711,21 +742,3 @@ document.addEventListener("DOMContentLoaded", () => {
     init()
 })
 
-document.getElementById("contact-service").addEventListener("change", () => {
-    document.getElementById("emptyopt").setAttribute("disabled", "true")
-})
-
-var phoneInput = document.getElementById("contact-phone")
-
-phoneInput.addEventListener("change", () => {
-    var regex = /^\\d+$/
-
-
-})
-
-
-window.addEventListener("beforeunload", () => {
-    document.getElementById("contact-form").reset()
-
-    document.getElementById("emptyopt").removeAttribute("disabled")
-})
