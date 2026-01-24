@@ -2000,7 +2000,7 @@ section.partners .container {
     }
 
     .service-card {
-        padding: 3rem;
+        padding: 1.5rem;
     }
 
     /* About */
@@ -2039,11 +2039,18 @@ section.partners .container {
         width: 100%;
     }
 
+    section.contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact .section-label {
+        margin-bottom: var(--space-4);
+    }
 
     .contact-details {
         width: 100%;
         margin: 0;
-        padding: 3rem;
+        padding: 3rem 2rem;
     }
 
     .cta {
