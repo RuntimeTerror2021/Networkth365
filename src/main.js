@@ -697,7 +697,7 @@ document.addEventListener("DOMContentLoaded", () => {
             var regex = /^\\d+$/
 
             phoneInput.value = phoneInput.value.replace(regex, "")
-
+//TODO: phone replace letters
         })
 
 
