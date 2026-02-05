@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formSuccess: document.getElementById("form-success"),
 
         // Animations
-        animatedElements: document.querySelectorAll(".animate-on-scroll"),
+        animatedElements: document.querySelectorAll(".animate-on-scroll, .animate-fade-right"),
 
         // Statistics
         statNumbers: document.querySelectorAll(".stat-item-number[data-count]"),
@@ -95,16 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /**
-     * Check if an element is in the viewport
-     * @param {HTMLElement} element - Element to check
-     * @param {number} offset - Offset from bottom of viewport (default: 100px)
-     * @returns {boolean} - True if element is in viewport
-     */
-    function isInViewport(element, offset = 100) {
+    // /**
+    //  * Check if an element is in the viewport
+    //  * @param {HTMLElement} element - Element to check
+    //  * @param {number} offset - Offset from bottom of viewport (default: 100px)
+    //  * @returns {boolean} - True if element is in viewport
+    //  */
+    function isInViewport(element, offset = 50) {
         const rect = element.getBoundingClientRect()
         return rect.top <= (window.innerHeight || document.documentElement.clientHeight) - offset
     }
+
+
 
     /**
      * Validate email format
@@ -649,7 +651,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (elements.widgetToggle) {
             elements.widgetToggle.addEventListener("click", toggleStickyWidget)
         }
-        document.addEventListener("click", handleWidgetClickOutside)
+        // document.addEventListener("click", handleWidgetClickOutside)
 
         // Contact form
         if (elements.contactForm) {
@@ -713,7 +715,12 @@ document.addEventListener("DOMContentLoaded", () => {
             el.addEventListener("click", (e) => {
                 e.preventDefault()
                 let link = el.querySelector('.nav-link')
-                link.click();
+                let href = link.getAttribute("href").toString()
+                if(!href.includes("#")) {
+                    window.location.href = href;
+                } else {
+                    link.click();
+                }
 
             })
         })

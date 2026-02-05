@@ -81,24 +81,24 @@
         <!-- Navigation Menu -->
 <!--        TODO: hide some of these by adding hide class to li-->
         <ul class="nav-menu" id="nav-menu" role="menubar">
-            <li class="nav-item" role="none">
+            <li class="nav-item hide" role="none">
                 <a href="#home" class="nav-link active" role="menuitem">Home</a>
             </li>
             <li class="nav-item" role="none">
                 <a href="#about" class="nav-link" role="menuitem">About</a>
             </li>
-            <li class="nav-item" role="none">
+            <li class="nav-item hide" role="none">
                 <a href="#partners" class="nav-link" role="menuitem">Providers</a>
             </li>
-            <li class="nav-item" role="none">
+            <li class="nav-item hide" role="none">
                 <a href="#services" class="nav-link" role="menuitem">Services</a>
             </li>
-<!--            <li class="nav-item" role="none">-->
-<!--                <a href="products.html" class="nav-link" role="menuitem">Products</a>-->
-<!--            </li>-->
             <li class="nav-item" role="none">
-                <a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a>
+                <a href="products.html" class="nav-link" role="menuitem">Products</a>
             </li>
+<!--            <li class="nav-item hide" role="none">-->
+<!--                <a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a>-->
+<!--            </li>-->
             <li class="nav-item" role="none">
                 <a href="#contact" class="nav-link" role="menuitem">Contact</a>
             </li>
@@ -146,8 +146,8 @@
 
                 <!-- Description -->
                 <p class="hero-description animate-fade-up delay-2">
-                    Secure your family's future with comprehensive insurance solutions,
-                    expert retirement planning, and personalized investment strategies.
+                    Secure your family's future with comprehensive life insurance solutions,
+                    expert retirement planning, and personalized planning strategies.
                     Let us help you build the financial foundation you deserve.
                 </p>
 
@@ -168,21 +168,31 @@
 <!--                        <span class="trust-number">500+</span>-->
 <!--                        <span class="trust-label">Clients Served</span>-->
 <!--                    </div>-->
+
+                    <div class="trust-item">
+                        <span class="trust-number">99%</span>
+                        <span class="trust-label">Client Satisfaction</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">15+ years</span>
+                        <span class="trust-label">Combined Experience</span>
+                    </div>
+                    <div class="trust-divider"></div>
+<!--                    <div class="trust-item">-->
+<!--                        <span class="trust-number">$20K+</span>-->
+<!--                        <span class="trust-label">Assets Protected</span>-->
+<!--                    </div>-->
+
 <!--                    <div class="trust-divider"></div>-->
                     <div class="trust-item">
-                        <span class="trust-number">1+</span>
-                        <span class="trust-label">Years Of Operation</span>
+                        <span class="trust-number">200+</span>
+                        <span class="trust-label">Plans Reviewed</span>
                     </div>
-                    <div class="trust-divider"></div>
-                    <div class="trust-item">
-                        <span class="trust-number">$20K+</span>
-                        <span class="trust-label">Assets Protected</span>
-                    </div>
-                    <div class="trust-divider"></div>
-                    <div class="trust-item">
-                        <span class="trust-number">10+</span>
-                        <span class="trust-label">Services Provided</span>
-                    </div>
+<!--                    <div class="trust-item">-->
+<!--                        <span class="trust-number">5+</span>-->
+<!--                        <span class="trust-label">Services Provided</span>-->
+<!--                    </div>-->
                 </div>
             </div>
 
@@ -196,19 +206,19 @@
                          loading="eager">
 
                     <!-- Floating Stats Card -->
-                    <div class="floating-card floating-card--1 animate-float">
-                        <div class="floating-card-icon">📈</div>
-                        <div class="floating-card-text">
-                            <span class="floating-card-number">98%</span>
-                            <span class="floating-card-label">Client Satisfaction</span>
-                        </div>
-                    </div>
+<!--                    <div class="floating-card floating-card&#45;&#45;1 animate-float">-->
+<!--                        <div class="floating-card-icon">📈</div>-->
+<!--                        <div class="floating-card-text">-->
+<!--                            <span class="floating-card-number">98%</span>-->
+<!--                            <span class="floating-card-label">Client Satisfaction</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
                     <div class="floating-card floating-card--2 animate-float delay-2">
-                        <div class="floating-card-icon">🛡️</div>
+                        <div class="floating-card-icon">📈️</div>
                         <div class="floating-card-text">
-                            <span class="floating-card-number">24/7</span>
-                            <span class="floating-card-label">Support Available</span>
+                            <span class="floating-card-number">+12.4%</span>
+                            <span class="floating-card-label">On-track Projection</span>
                         </div>
                     </div>
                 </div>
@@ -243,7 +253,7 @@
                     </div>
                     <div class="about-image-details">
                         <h4 class="about-image-name">Nishant Soni</h4>
-                        <p class="about-image-license">License No.: 16609878</p>
+                        <p class="about-image-license">License Number: 16609878</p>
                     </div>
                 </div>
 
@@ -261,8 +271,7 @@
                     </p>
 
                     <p class="about-text animate-on-scroll">
-                        Our approach is simple: we listen first. By understanding your unique situation,
-                        goals, and concerns, we craft tailored financial strategies that work for you.
+                        My mission is simple: to safeguard your legacy and help you grow your wealth through 365 days of financial security.
                         Whether you're protecting your family with life insurance, planning for retirement,
                         or investing for your children's education, we're here to guide you every step of the way.
                     </p>
@@ -442,64 +451,48 @@
             <!-- Services Grid -->
             <div class="services-grid">
 
-                <article class="service-card animate-on-scroll" data-delay="0">
+                <article class="service-card animate-on-scroll" data-delay="100">
                     <div class="service-card-icon">
                         <img src="src/media/lifeinsurance.jpg" alt="Life Insurance Illustration">
                     </div>
                     <h3 class="service-card-title">Life Insurance Planning</h3>
                     <p class="service-card-description">
-                        Protect your loved ones with comprehensive life insurance coverage.
-                        Term life, whole life, or indexed universal life.
+<!--                        Protect your loved ones with right-sized coverage with living benefits and a quote that fits your budget.-->
+<!--                        Term life, whole life, or indexed universal life.-->
+                        Protect your loved ones and mortgage with right-sized coverage, living benefits, and a quote that fits your budget.
                     </p>
-                    <a href="#contact" class="service-card-link">
+<!--                    TODO: change all links to remove html ending-->
+                    <a href="./products.html#life-insurance" class="service-card-link">
                         Learn More <span aria-hidden="true">→</span>
                     </a>
                 </article>
 
-                <article class="service-card animate-on-scroll" data-delay="400">
-                    <div class="service-card-icon">
-                        <img src="src/media/retirementplanning.jpg" alt="retirement planning illustration">
-                    </div>
-                    <h3 class="service-card-title">Retirement Planning</h3>
-                    <p class="service-card-description">
-                        Plan for the retirement you deserve. 401(k), IRA, pension
-                        optimization, and income strategies.
-                    </p>
-                    <a href="#contact" class="service-card-link">
-                        Learn More <span aria-hidden="true">→</span>
-                    </a>
-                </article>
-
-                <!-- Service Card 6: Education Planning -->
-                <article class="service-card animate-on-scroll" data-delay="500">
+                <article class="service-card animate-on-scroll" data-delay="200">
                     <div class="service-card-icon">
                         <img src="src/media/eduplanning.jpg" alt="education planning illustration">
                     </div>
                     <h3 class="service-card-title">Kids' Education Planning</h3>
                     <p class="service-card-description">
-                        Invest in your children's future. 529 plans, education
-                        savings accounts, and scholarship strategies.
+                        Choose a smart, disciplined path to fund your children’s education.
                     </p>
-                    <a href="#contact" class="service-card-link">
+                    <a href="./products.html#kids-ed" class="service-card-link">
                         Learn More <span aria-hidden="true">→</span>
                     </a>
                 </article>
-
-                <article class="service-card animate-on-scroll" data-delay="600">
+                <article class="service-card animate-on-scroll" data-delay="300">
                     <div class="service-card-icon">
-                        <img src="src/media/estateplanning.jpg" alt="estate planning illustration">
+                        <img src="src/media/retirementplanning.jpg" alt="retirement planning illustration">
                     </div>
-                    <h3 class="service-card-title">Estate Planning</h3>
+                    <h3 class="service-card-title">Retirement Planning</h3>
                     <p class="service-card-description">
-                        Estate planning helps prevent a prolonged probate process for loved ones. This includes drafting a Will, establishing a Trust,
-                        designating beneficiaries and executors, and appointing a legal guardian.
+                        Plan for the retirement you deserve so you don't have to rely on just your assets.
                     </p>
-                    <a href="#contact" class="service-card-link">
+                    <a href="./products.html#retirement-planning" class="service-card-link">
                         Learn More <span aria-hidden="true">→</span>
                     </a>
                 </article>
 
-                <article class="service-card animate-on-scroll" data-delay="600">
+                <article class="service-card animate-on-scroll" data-delay="400">
                     <div class="service-card-icon">
                         <img src="https://www.spencersavings.com/media/2019/09/image_661493680-e1568645358499.jpg" alt="estate planning illustration">
                     </div>
@@ -507,10 +500,25 @@
                     <p class="service-card-description">
                         Create a pension and secure predictable, lifetime income streams.
                     </p>
-                    <a href="#contact" class="service-card-link">
+                    <a href="./products.html#lifetime-income" class="service-card-link">
                         Learn More <span aria-hidden="true">→</span>
                     </a>
                 </article>
+
+                <article class="service-card animate-on-scroll" data-delay="500">
+                    <div class="service-card-icon">
+                        <img src="src/media/estateplanning.jpg" alt="estate planning illustration">
+                    </div>
+                    <h3 class="service-card-title">Estate Planning</h3>
+                    <p class="service-card-description">
+                        Protect what you’ve built from probate, litigation, and unfavorable taxation.
+                    </p>
+                    <a href="./products.html#estate-planning" class="service-card-link">
+                        Learn More <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+
             </div>
         </div>
     </section>
@@ -595,139 +603,139 @@
 
 
 
-    <section class="stats" aria-label="Company Statistics">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item animate-on-scroll" data-delay="0">
-                    <span class="stat-item-number" data-count="10">0</span>
-                    <span class="stat-item-suffix">+</span>
-                    <span class="stat-item-label">Services Provided</span>
-                </div>
-                <div class="stat-item animate-on-scroll" data-delay="100">
-                    <span class="stat-item-prefix">$</span>
-                    <span class="stat-item-number" data-count="20">0</span>
-                    <span class="stat-item-suffix">K+</span>
-                    <span class="stat-item-label">Assets Protected</span>
-                </div>
-                <div class="stat-item animate-on-scroll" data-delay="200">
-                    <span class="stat-item-number" data-count="15">0</span>
-                    <span class="stat-item-suffix">+</span>
-                    <span class="stat-item-label">Years Experience</span>
-                </div>
-                <div class="stat-item animate-on-scroll" data-delay="300">
-                    <span class="stat-item-number" data-count="98">0</span>
-                    <span class="stat-item-suffix">%</span>
-                    <span class="stat-item-label">Client Satisfaction</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<!--    <section class="stats" aria-label="Company Statistics">-->
+<!--        <div class="container">-->
+<!--            <div class="stats-grid">-->
+<!--                <div class="stat-item animate-on-scroll" data-delay="0">-->
+<!--                    <span class="stat-item-number" data-count="10">0</span>-->
+<!--                    <span class="stat-item-suffix">+</span>-->
+<!--                    <span class="stat-item-label">Services Provided</span>-->
+<!--                </div>-->
+<!--                <div class="stat-item animate-on-scroll" data-delay="100">-->
+<!--                    <span class="stat-item-prefix">$</span>-->
+<!--                    <span class="stat-item-number" data-count="20">0</span>-->
+<!--                    <span class="stat-item-suffix">K+</span>-->
+<!--                    <span class="stat-item-label">Assets Protected</span>-->
+<!--                </div>-->
+<!--                <div class="stat-item animate-on-scroll" data-delay="200">-->
+<!--                    <span class="stat-item-number" data-count="15">0</span>-->
+<!--                    <span class="stat-item-suffix">+</span>-->
+<!--                    <span class="stat-item-label">Years Experience</span>-->
+<!--                </div>-->
+<!--                <div class="stat-item animate-on-scroll" data-delay="300">-->
+<!--                    <span class="stat-item-number" data-count="98">0</span>-->
+<!--                    <span class="stat-item-suffix">%</span>-->
+<!--                    <span class="stat-item-label">Client Satisfaction</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
-        <div class="container">
-            <!-- Section Header -->
-            <header class="section-header">
-                <span class="section-label animate-on-scroll">Client Stories</span>
-                <h2 id="testimonials-heading" class="section-title animate-on-scroll">
-                    What Our Clients Say
-                </h2>
-                <p class="section-description animate-on-scroll">
-                    Don't just take our word for it. Here's what our valued clients
-                    have to say about their experience with Networkth365.
-                </p>
-            </header>
+<!--    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">-->
+<!--        <div class="container">-->
+<!--            &lt;!&ndash; Section Header &ndash;&gt;-->
+<!--            <header class="section-header">-->
+<!--                <span class="section-label animate-on-scroll">Client Stories</span>-->
+<!--                <h2 id="testimonials-heading" class="section-title animate-on-scroll">-->
+<!--                    What Our Clients Say-->
+<!--                </h2>-->
+<!--                <p class="section-description animate-on-scroll">-->
+<!--                    Don't just take our word for it. Here's what our valued clients-->
+<!--                    have to say about their experience with Networkth365.-->
+<!--                </p>-->
+<!--            </header>-->
 
-            <!-- Testimonials Slider -->
-            <div class="testimonials-slider" id="testimonials-slider">
-                <div class="testimonials-track">
-                    <!-- Testimonial 1 -->
-                    <article class="testimonial-card animate-on-scroll" data-delay="0">
-                        <div class="testimonial-card-stars" aria-label="5 out of 5 stars">
-                            ★★★★★
-                        </div>
-                        <blockquote class="testimonial-card-quote">
-                            "Networkth365 helped us navigate the complex world of retirement planning
-                            with ease. Their personalized approach and genuine care for our financial
-                            wellbeing made all the difference. Highly recommended!"
-                        </blockquote>
-                        <footer class="testimonial-card-author">
-                            <img src="/placeholder.svg?height=60&width=60"
-                                 alt="John D. - Satisfied Client"
-                                 class="testimonial-card-avatar"
-                                 loading="lazy">
-                            <div class="testimonial-card-info">
-                                <cite class="testimonial-card-name">John D.</cite>
-                                <span class="testimonial-card-role">Business Owner</span>
-                            </div>
-                        </footer>
-                    </article>
+<!--            &lt;!&ndash; Testimonials Slider &ndash;&gt;-->
+<!--            <div class="testimonials-slider" id="testimonials-slider">-->
+<!--                <div class="testimonials-track">-->
+<!--                    &lt;!&ndash; Testimonial 1 &ndash;&gt;-->
+<!--                    <article class="testimonial-card animate-on-scroll" data-delay="0">-->
+<!--                        <div class="testimonial-card-stars" aria-label="5 out of 5 stars">-->
+<!--                            ★★★★★-->
+<!--                        </div>-->
+<!--                        <blockquote class="testimonial-card-quote">-->
+<!--                            "Networkth365 helped us navigate the complex world of retirement planning-->
+<!--                            with ease. Their personalized approach and genuine care for our financial-->
+<!--                            wellbeing made all the difference. Highly recommended!"-->
+<!--                        </blockquote>-->
+<!--                        <footer class="testimonial-card-author">-->
+<!--                            <img src="/placeholder.svg?height=60&width=60"-->
+<!--                                 alt="John D. - Satisfied Client"-->
+<!--                                 class="testimonial-card-avatar"-->
+<!--                                 loading="lazy">-->
+<!--                            <div class="testimonial-card-info">-->
+<!--                                <cite class="testimonial-card-name">John D.</cite>-->
+<!--                                <span class="testimonial-card-role">Business Owner</span>-->
+<!--                            </div>-->
+<!--                        </footer>-->
+<!--                    </article>-->
 
-                    <!-- Testimonial 2 -->
-                    <article class="testimonial-card animate-on-scroll" data-delay="100">
-                        <div class="testimonial-card-stars" aria-label="5 out of 5 stars">
-                            ★★★★★
-                        </div>
-                        <blockquote class="testimonial-card-quote">
-                            "After struggling to find the right life insurance coverage, I found
-                            Networkth365. They took the time to understand my family's needs and
-                            found us the perfect policy at a great rate. True professionals!"
-                        </blockquote>
-                        <footer class="testimonial-card-author">
-                            <img src="/placeholder.svg?height=60&width=60"
-                                 alt="Sarah M. - Satisfied Client"
-                                 class="testimonial-card-avatar"
-                                 loading="lazy">
-                            <div class="testimonial-card-info">
-                                <cite class="testimonial-card-name">Sarah M.</cite>
-                                <span class="testimonial-card-role">Healthcare Professional</span>
-                            </div>
-                        </footer>
-                    </article>
+<!--                    &lt;!&ndash; Testimonial 2 &ndash;&gt;-->
+<!--                    <article class="testimonial-card animate-on-scroll" data-delay="100">-->
+<!--                        <div class="testimonial-card-stars" aria-label="5 out of 5 stars">-->
+<!--                            ★★★★★-->
+<!--                        </div>-->
+<!--                        <blockquote class="testimonial-card-quote">-->
+<!--                            "After struggling to find the right life insurance coverage, I found-->
+<!--                            Networkth365. They took the time to understand my family's needs and-->
+<!--                            found us the perfect policy at a great rate. True professionals!"-->
+<!--                        </blockquote>-->
+<!--                        <footer class="testimonial-card-author">-->
+<!--                            <img src="/placeholder.svg?height=60&width=60"-->
+<!--                                 alt="Sarah M. - Satisfied Client"-->
+<!--                                 class="testimonial-card-avatar"-->
+<!--                                 loading="lazy">-->
+<!--                            <div class="testimonial-card-info">-->
+<!--                                <cite class="testimonial-card-name">Sarah M.</cite>-->
+<!--                                <span class="testimonial-card-role">Healthcare Professional</span>-->
+<!--                            </div>-->
+<!--                        </footer>-->
+<!--                    </article>-->
 
-                    <!-- Testimonial 3 -->
-                    <article class="testimonial-card animate-on-scroll" data-delay="200">
-                        <div class="testimonial-card-stars" aria-label="5 out of 5 stars">
-                            ★★★★★
-                        </div>
-                        <blockquote class="testimonial-card-quote">
-                            "The team at Networkth365 helped us set up college savings plans for
-                            both our children. Their expertise in education planning has given us
-                            peace of mind about our kids' futures. Thank you!"
-                        </blockquote>
-                        <footer class="testimonial-card-author">
-                            <img src="/placeholder.svg?height=60&width=60"
-                                 alt="The Thompson Family - Satisfied Clients"
-                                 class="testimonial-card-avatar"
-                                 loading="lazy">
-                            <div class="testimonial-card-info">
-                                <cite class="testimonial-card-name">The Thompson Family</cite>
-                                <span class="testimonial-card-role">Kids' Education Planning Clients</span>
-                            </div>
-                        </footer>
-                    </article>
-                </div>
+<!--                    &lt;!&ndash; Testimonial 3 &ndash;&gt;-->
+<!--                    <article class="testimonial-card animate-on-scroll" data-delay="200">-->
+<!--                        <div class="testimonial-card-stars" aria-label="5 out of 5 stars">-->
+<!--                            ★★★★★-->
+<!--                        </div>-->
+<!--                        <blockquote class="testimonial-card-quote">-->
+<!--                            "The team at Networkth365 helped us set up college savings plans for-->
+<!--                            both our children. Their expertise in education planning has given us-->
+<!--                            peace of mind about our kids' futures. Thank you!"-->
+<!--                        </blockquote>-->
+<!--                        <footer class="testimonial-card-author">-->
+<!--                            <img src="/placeholder.svg?height=60&width=60"-->
+<!--                                 alt="The Thompson Family - Satisfied Clients"-->
+<!--                                 class="testimonial-card-avatar"-->
+<!--                                 loading="lazy">-->
+<!--                            <div class="testimonial-card-info">-->
+<!--                                <cite class="testimonial-card-name">The Thompson Family</cite>-->
+<!--                                <span class="testimonial-card-role">Kids' Education Planning Clients</span>-->
+<!--                            </div>-->
+<!--                        </footer>-->
+<!--                    </article>-->
+<!--                </div>-->
 
-                <!-- Slider Navigation -->
-                <div class="testimonials-nav">
-                    <button class="testimonials-btn testimonials-btn--prev"
-                            id="testimonials-prev"
-                            aria-label="Previous testimonial">
-                        ←
-                    </button>
-                    <div class="testimonials-dots" id="testimonials-dots">
-                        <button class="testimonials-dot active" aria-label="Go to testimonial 1"></button>
-                        <button class="testimonials-dot" aria-label="Go to testimonial 2"></button>
-                        <button class="testimonials-dot" aria-label="Go to testimonial 3"></button>
-                    </div>
-                    <button class="testimonials-btn testimonials-btn--next"
-                            id="testimonials-next"
-                            aria-label="Next testimonial">
-                        →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+<!--                &lt;!&ndash; Slider Navigation &ndash;&gt;-->
+<!--                <div class="testimonials-nav">-->
+<!--                    <button class="testimonials-btn testimonials-btn&#45;&#45;prev"-->
+<!--                            id="testimonials-prev"-->
+<!--                            aria-label="Previous testimonial">-->
+<!--                        ←-->
+<!--                    </button>-->
+<!--                    <div class="testimonials-dots" id="testimonials-dots">-->
+<!--                        <button class="testimonials-dot active" aria-label="Go to testimonial 1"></button>-->
+<!--                        <button class="testimonials-dot" aria-label="Go to testimonial 2"></button>-->
+<!--                        <button class="testimonials-dot" aria-label="Go to testimonial 3"></button>-->
+<!--                    </div>-->
+<!--                    <button class="testimonials-btn testimonials-btn&#45;&#45;next"-->
+<!--                            id="testimonials-next"-->
+<!--                            aria-label="Next testimonial">-->
+<!--                        →-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
     <section class="cta" aria-labelledby="cta-heading">
         <div class="cta-background">
@@ -771,16 +779,16 @@
                     </p>
 
                     <!-- Contact Details -->
-                    <ul class="contact-details animate-on-scroll">
+                    <ul id="contact-details" class="contact-details animate-on-scroll">
 
-                        <h2 class="section-title animate-on-scroll">
+                        <h2 class="section-title animate-fade-up">
                             <img src="src/media/transparent-logo-full.png" alt="Networkth365 Logo">
                             <span class="logo-text">Network<span class="logo-accent dark">th</span><span class="logo-accent">365</span></span>
                         </h2>
 
 
                         <!-- Phone -->
-                        <li class="contact-item">
+                        <li class="contact-item animate-fade-up delay-1">
                             <div class="contact-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -794,7 +802,7 @@
                         </li>
 
                         <!-- Email -->
-                        <li class="contact-item">
+                        <li class="contact-item animate-fade-up delay-2">
                             <div class="contact-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <rect width="20" height="16" x="2" y="4" rx="2"/>
@@ -807,7 +815,7 @@
                             </div>
                         </li>
 
-                        <li class="contact-item">
+                        <li class="contact-item animate-fade-up delay-3">
                             <div class="contact-text">
                                 <a target="_blank" href="https://wa.me/+13316455913?text=Hi Nish, I am writing to ask you about the financial services you offer.">
                                     <button class="wpbtn">
@@ -821,7 +829,7 @@
                             </div>
                         </li>
 
-                        <li class="contact-item">
+                        <li class="contact-item animate-fade-up delay-4">
                             <div class="contact-text">
                                 <a target="_blank" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
                                     <button>
@@ -1050,11 +1058,11 @@
         <!-- Footer Top -->
         <div class="footer-top">
             <!-- Footer Brand -->
-            <div class="footer-brand">
+            <div class="footer-brand animate-fade-right">
                 <a href="#home" class="footer-logo" aria-label="Networkth365 Home">
                     <span class="logo-text">
                         <img src="src/media/transparent-logo-full.png" width="256"  alt="Networkth365 Logo">
-                        Networkth<span class="logo-accent">365</span>
+                        <span class="logo-title">Network<span class="logo-accent dark">th</span><span class="logo-accent">365</span></span>
                     </span>
                 </a>
                 <p class="footer-tagline">Safeguard Your Legacy, Grow Your Wealth.</p>
@@ -1065,20 +1073,20 @@
 
             <!-- Footer Links -->
             <div class="footer-links">
-                <div class="footer-column">
+                <div class="footer-column animate-fade-right delay-1">
                     <h5 class="footer-heading">Quick Links</h5>
                     <ul class="footer-list">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#partners">Partners</a></li>
                         <li><a href="#services">Services</a></li>
-<!--                        <li><a href="#">Products</a></li>-->
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="./products.html">Products</a></li>
+<!--                        <li><a href="#testimonials">Testimonials</a></li>-->
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-column">
+                <div class="footer-column animate-fade-right delay-2">
                     <h5 class="footer-heading">Services</h5>
                     <ul class="footer-list">
                         <li><a class="service-option-link" href="#services">Life Insurance Planning</a></li>
@@ -1092,7 +1100,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-column">
+                <div class="footer-column animate-fade-right delay-3">
                     <h5 class="footer-heading">Legal</h5>
                     <ul class="footer-list">
                         <!-- Replace # with actual page links -->
@@ -1103,7 +1111,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-column">
+                <div class="footer-column animate-fade-right delay-4">
                     <h5 class="footer-heading">Contact</h5>
                     <ul class="footer-list footer-list--contact">
                         <li>
@@ -1120,7 +1128,7 @@
         </div>
 
         <!-- Footer Bottom -->
-        <div class="footer-bottom">
+        <div class="footer-bottom animate-fade-up delay-6">
             <p class="footer-copyright">
                 &copy; <span id="current-year">2026</span> Networkth365. All rights reserved.
             </p>
