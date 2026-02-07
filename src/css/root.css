@@ -31,7 +31,7 @@
 
 @font-face {
 	font-family: 'Bricolage Grotesque1';
-	src: url('media/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf');
+	src: url('../media/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf');
 }
 
 :root {
