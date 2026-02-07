@@ -86,3 +86,19 @@ main section.gallery .gallery-cards-container .gallery-card .gallery-images-cont
 	object-fit: cover; /* or 'contain' */
 	border-radius: var(--radius-md)
 }
+
+
+
+.gallery-image-container:nth-last-child(6) img,
+.gallery-image-container:nth-last-child(7) img,
+.gallery-image-container:nth-last-child(8) img {
+	object-position: 0px -40px;
+}
+
+.gallery-image-container:nth-last-child(2) img {
+	object-position: 0px -80px;
+}
+
+.gallery-image-container:nth-child(2) img {
+	object-position: 0px -140px;
+}
