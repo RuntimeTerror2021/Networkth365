@@ -2096,11 +2096,18 @@ section.partners .container {
 
 /* Mobile */
 @media (max-width: 768px) {
+
+
     :root {
         --font-size-5xl: 2rem;
         --font-size-4xl: 1.75rem;
         --font-size-3xl: 1.5rem;
         --container-padding: var(--space-4);
+    }
+
+    main section.service {
+        padding-left: var(--space-1) !important;
+        padding-right: var(--space-1) !important;
     }
 
     section {
@@ -2238,7 +2245,9 @@ section.partners .container {
 }
 
 /* Small Mobile */
-@media (max-width: 480px) {
+@media (max-width: 490px) {
+
+
     :root {
         --font-size-5xl: 1.75rem;
         --font-size-4xl: 1.5rem;
