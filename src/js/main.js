@@ -248,6 +248,12 @@ document.addEventListener("DOMContentLoaded", () => {
      * Check and trigger animations for elements in viewport
      */
     function handleScrollAnimations() {
+        document.querySelectorAll('*[class^=\'delay\'], *[class*=\' delay\']').forEach((element) => {
+            var elClassStr = element.classList.toString();
+            var delayScalar = parseInt(elClassStr.substring(elClassStr.indexOf("delay") + 6))
+
+            element.style.animationDelay = delayScalar * 0.1 + "s";
+        })
         elements.animatedElements.forEach((element) => {
             if (isInViewport(element) && !element.classList.contains("is-visible")) {
                 element.classList.add("is-visible")
