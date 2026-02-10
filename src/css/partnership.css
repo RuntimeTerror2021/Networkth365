@@ -5,6 +5,16 @@ main section.partnership {
 	flex-wrap: nowrap;
 	flex-direction: column;
 	background: var(--color-gray-50);
+
+}
+
+main section.partnership .service-card-description {
+	max-width: 800px;
+	text-align: left;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
 }
 
 main section.partnership .service-card-description a.btn {
@@ -50,6 +60,7 @@ main section.partnership .partner-cards-container .partner-card svg {
 	padding: .75rem;
 	border-radius: var(--radius-md);
 	margin-bottom: .5rem;
+	margin-top: .2rem;
 }
 
 main section.partnership .partner-cards-container .partner-card h5 {
