@@ -103,3 +103,16 @@ main section.gallery .gallery-cards-container .gallery-card .gallery-images-cont
 .gallery-image-container:nth-child(2) img {
 	object-position: 0px -140px;
 }
+
+@media (max-width: 768px) {
+	main section.gallery .gallery-cards-container .gallery-card {
+		padding: 1rem .5rem;
+		margin: 1rem;
+	}
+
+	main section.gallery .gallery-cards-container .gallery-card .gallery-card-title-container {
+		justify-content: center;
+		align-items: center;
+	}
+
+}
