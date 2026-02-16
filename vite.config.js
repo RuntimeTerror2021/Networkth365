@@ -13,7 +13,6 @@ export default defineConfig({
                 privacy: resolve(__dirname, 'privacy.html'),
                 products: resolve(__dirname, 'products.html'),
                 gallery: resolve(__dirname, 'gallery.html'),
-                events: resolve(__dirname, 'events.html'),
                 partnership: resolve(__dirname, 'partnership.html'),
             },
         },
