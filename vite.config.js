@@ -14,6 +14,7 @@ export default defineConfig({
                 products: resolve(__dirname, 'products.html'),
                 gallery: resolve(__dirname, 'gallery.html'),
                 partnership: resolve(__dirname, 'partnership.html'),
+                googlefdc71d92237b6a52: resolve(__dirname, "googlefdc71d92237b6a52.html")
             },
         },
     },
