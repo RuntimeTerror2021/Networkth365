@@ -73,14 +73,15 @@
     <nav class="nav container" aria-label="Main navigation">
         <!-- Logo -->
         <a href="#home" class="nav-logo" aria-label="Networkth365 Home">
-            <!-- Replace with actual logo -->
-            <img src="src/media/brand/transparent-logo-full.png" alt="Networkth365 Logo">
-            <span class="logo-text">Network<span class="logo-accent dark">th</span><span class="logo-accent">365</span></span>
+            <img src="src/media/brand/logoblue.png" alt="Networkth365">
         </a>
 
         <!-- Navigation Menu -->
 <!--        TODO: hide some of these by adding hide class to li-->
         <ul class="nav-menu" id="nav-menu" role="menubar">
+            <li class="nav-menu-title" role="none">
+                <h2 class="nav-menu-title-heading">What are you looking for?</h2>
+            </li>
             <li class="nav-item hide" role="none">
                 <a href="#home" class="nav-link active" role="menuitem">Home</a>
             </li>
@@ -241,24 +242,46 @@
     <section class="about" id="about" aria-labelledby="about-heading">
         <div class="container">
             <div class="about-grid">
-                <!-- About Image -->
-                <div class="about-image animate-on-scroll">
-                    <div class="about-image-wrapper">
-                        <img src="src/media/brand/nish%20portrait%20square.png"
-                             alt="Networkth365 founder and lead financial advisor"
-                             class="about-img"
-                             loading="lazy">
+                <div class="about-image about-image--team animate-on-scroll">
 
-                        <!-- Experience Badge -->
+                    <div class="about-portrait">
+                        <div class="about-image-wrapper">
+                            <img src="src/media/brand/nish-portrait.png"
+                                 alt="Networkth365 founder and lead financial advisor"
+                                 class="about-img"
+                                 loading="lazy">
+
+                            <!-- Experience Badge -->
 <!--                        TODO: unhide later-->
 <!--                        <div class="about-badge animate-float">-->
 <!--                            <span class="about-badge-number">15+</span>-->
 <!--                            <span class="about-badge-text">Years of Experience</span>-->
 <!--                        </div>-->
+                        </div>
+                        <div class="about-image-details">
+                            <h4 class="about-image-name">Nishant Soni</h4>
+                            <p class="about-image-role">Life Insurance &amp; Wealth Planning</p>
+                            <ul class="license-list">
+                                <li>NPN #16609878</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="about-image-details">
-                        <h4 class="about-image-name">Nishant Soni</h4>
-                        <p class="about-image-license">License Number: 16609878</p>
+
+                    <div class="about-portrait">
+                        <div class="about-image-wrapper">
+                            <img src="src/media/brand/Dinal.png"
+                                 alt="Networkth365 licensed health and life insurance advisor"
+                                 class="about-img"
+                                 loading="lazy">
+                        </div>
+                        <div class="about-image-details">
+                            <h4 class="about-image-name">Dinal Soni</h4>
+                            <p class="about-image-role">Life & Health Insurance</p>
+                            <ul class="license-list">
+                                <li>NPN #22262093</li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -266,7 +289,7 @@
                 <div class="about-content">
                     <span class="section-label animate-on-scroll">About Networkth365</span>
                     <h2 id="about-heading" class="section-title animate-on-scroll">
-                        Your Trusted Partner in Financial Security
+                        Your Trusted Partner in Financial &amp; Health Security
                     </h2>
 
                     <p class="about-text animate-on-scroll">
@@ -276,9 +299,9 @@
                     </p>
 
                     <p class="about-text animate-on-scroll">
-                        My mission is simple: to safeguard your legacy and help you grow your wealth through 365 days of financial security.
+                        Our mission is simple: to safeguard your legacy and help you grow your wealth through 365 days of financial security.
                         Whether you're protecting your family with life insurance, planning for retirement,
-                        or investing for your children's education, we're here to guide you every step of the way.
+                        investing for your children's education, or navigating health coverage, we're here to guide you every step of the way.
                     </p>
 
                     <!-- Values List -->
@@ -298,6 +321,10 @@
                         <li class="about-value">
                             <span class="about-value-icon">✓</span>
                             <span>Long-term Client Relationships</span>
+                        </li>
+                        <li class="about-value">
+                            <span class="about-value-icon">✓</span>
+                            <span>Licensed Health &amp; Life Advisors</span>
                         </li>
                     </ul>
 
@@ -324,106 +351,112 @@
                 </p>
             </header>
 
-            <div class="partners-grid animate-on-scroll">
-                <div class="partner-logo">
-                    <img src="src/media/partners/nationwide.png"
-                         alt="Nationwide company logo"
-                         loading="lazy">
+            <!-- Infinite marquee: the logo set is rendered twice and the track is
+                 translated by exactly one set width (-50%) for a seamless loop. -->
+            <div class="partners-marquee animate-on-scroll" role="group"
+                 aria-label="Our elite product providers and affiliated companies">
+                <div class="partners-track">
+                    <div class="partners-set">
+                            <div class="partner-logo">
+                                <img src="src/media/partners/nationwide.png" alt="Nationwide company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/athene.png" alt="Athene company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/aig.jpg" alt="AIG company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/north-am.png" alt="North American Financial company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/F&G.png" alt="F&G company logo" loading="lazy" style="width:80%">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/annexus.png" alt="annexus company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/netlaw.png" alt="Netlaw company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/examfx.png" alt="Examfx company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/corebridge.png" alt="Corebridge company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/Allianz.png" alt="allianz company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/ameritas.png" alt="Ameritas company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/ap.png" alt="Agent pipleline company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/ethos.jpg" alt="ethos company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/nf.png" alt="neishloss and fleming company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/wfs.png" alt="wfs company logo" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/xcel.png" alt="xcel company logo" loading="lazy">
+                            </div>
+                    </div>
+                    <div class="partners-set" aria-hidden="true">
+                            <div class="partner-logo">
+                                <img src="src/media/partners/nationwide.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/athene.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/aig.jpg" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/north-am.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/F&G.png" alt="" loading="lazy" style="width:80%">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/annexus.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/netlaw.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/examfx.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/corebridge.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/Allianz.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/ameritas.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/ap.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/ethos.jpg" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/nf.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/wfs.png" alt="" loading="lazy">
+                            </div>
+                            <div class="partner-logo">
+                                <img src="src/media/partners/xcel.png" alt="" loading="lazy">
+                            </div>
+                    </div>
                 </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/athene.png"
-                         alt="Athene company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/aig.jpg"
-                         alt="AIG company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/north-am.png"
-                         alt="North American Financial company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/F&G.png"
-                         alt="F&G company logo"
-                         loading="lazy"
-                         style="width:80%">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/annexus.png"
-                         alt="annexus company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/netlaw.png"
-                         alt="Netlaw company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/examfx.png"
-                         alt="Examfx company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/corebridge.png"
-                         alt="Corebridge company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/Allianz.png"
-                         alt="allianz company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/ameritas.png"
-                    alt="Ameritas company logo"
-                    loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/ap.png"
-                         alt="Agent pipleline company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/ethos.jpg"
-                         alt="ethos company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/nf.png"
-                         alt="neishloss and fleming company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/wfs.png"
-                         alt="wfs company logo"
-                         loading="lazy">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="src/media/partners/xcel.png"
-                         alt="xcel company logo"
-                         loading="lazy">
-                </div>
-
-
-
             </div>
         </div>
     </section>
@@ -508,6 +541,51 @@
                         Protect what you’ve built from probate, litigation, and unfavorable taxation.
                     </p>
                     <a href="./products.html" class="service-card-link">
+                        Learn More <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <!-- Health & long-term care offerings - handled by the second advisor, who holds
+                     the health license. All three cards link into products.html#health-care. -->
+                <article class="service-card animate-on-scroll" data-delay="600">
+                    <div class="service-card-icon">
+                        <img src="https://media.istockphoto.com/id/1047505000/photo/medicare-health-insurance-card.jpg?s=612x612&w=0&k=20&c=Q-a8HDKaPTyZzzlS-MWfyme2OiPi0X7BD3fUaJHXeTA=-medicare.svg" alt="Medicare illustration">
+                    </div>
+                    <h3 class="service-card-title">Medicare</h3>
+                    <p class="service-card-description">
+                        Evaluate your options with a licensed health advisor. We compare Medicare
+                        Advantage and Supplement plans side by side so you can choose coverage that
+                        fits your health, your budget, and your doctors.
+                    </p>
+                    <a href="./products.html#health-care" class="service-card-link">
+                        Learn More <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <article class="service-card animate-on-scroll" data-delay="700">
+                    <div class="service-card-icon">
+                        <img src="https://t4.ftcdn.net/jpg/03/00/14/87/360_F_300148775_zAEm25PtY6D39qRHYlNSuc1BDNqmQvzF.jpg" alt="health insurance illustration">
+                    </div>
+                    <h3 class="service-card-title">Health Insurance</h3>
+                    <p class="service-card-description">
+                        Individual, family, and self-employed health coverage guided through enrollment
+                        and subsidies - with a licensed advisor in your corner instead of a call center.
+                    </p>
+                    <a href="./products.html#health-care" class="service-card-link">
+                        Learn More <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <article class="service-card animate-on-scroll" data-delay="800">
+                    <div class="service-card-icon">
+                        <img src="https://t3.ftcdn.net/jpg/06/02/64/78/360_F_602647850_H3RamySxVR9g83pfyDgE4FPartzSKNfU.jpg" alt="Long-Term Care illustration">
+                    </div>
+                    <h3 class="service-card-title">Long-Term Care</h3>
+                    <p class="service-card-description">
+                        The cost of care can outpace your savings. Plan ahead with long-term care
+                        coverage so you protect your independence, your finances, and your choices.
+                    </p>
+                    <a href="./products.html#health-care" class="service-card-link">
                         Learn More <span aria-hidden="true">→</span>
                     </a>
                 </article>
@@ -772,73 +850,146 @@
                         for a free, no-obligation consultation. We're here to help.
                     </p>
 
-                    <!-- Contact Details -->
-                    <ul id="contact-details" class="contact-details animate-on-scroll">
+                    <div id="contact-details" class="contact-details animate-on-scroll">
 
                         <h2 class="section-title animate-fade-up">
                             <img src="src/media/brand/transparent-logo-full.png" alt="Networkth365 Logo">
                             <span class="logo-text">Network<span class="logo-accent dark">th</span><span class="logo-accent">365</span></span>
                         </h2>
 
+                        <section class="advisor-contact" aria-labelledby="advisor-1-heading">
+                            <header class="advisor-contact-header">
+                                <h3 class="advisor-contact-name" id="advisor-1-heading">Nishant Soni</h3>
+                                <p class="advisor-contact-role">Life Insurance &amp; Wealth Planning</p>
+                                <ul class="license-list">
+                                    <li>NPN #16609878</li>
+                                </ul>
+                            </header>
 
-                        <!-- Phone -->
-                        <li class="contact-item animate-fade-up delay-1">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <strong>Phone Number</strong>
-                                <!-- Replace with actual phone -->
-                                <a target="_blank" href="tel:+13316455913">+1 (331) 645-5913</a>
-                            </div>
-                        </li>
+                            <ul class="advisor-contact-list">
+                                <!-- Phone -->
+                                <li class="contact-item animate-fade-up delay-1">
+                                    <div class="contact-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-text">
+                                        <strong>Phone Number</strong>
+                                        <a target="_blank" href="tel:+13316455913">+1 (331) 645-5913</a>
+                                    </div>
+                                </li>
 
-                        <!-- Email -->
-                        <li class="contact-item animate-fade-up delay-2">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <rect width="20" height="16" x="2" y="4" rx="2"/>
-                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <strong>Email Address</strong>
-                                <a target="_blank" href="mailto:solutions@networkth365.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi Nish,%0D%0AI am writing to ask you about the financial services you offer.">solutions@networkth365.com</a>
-                            </div>
-                        </li>
+                                <!-- Email -->
+                                <li class="contact-item animate-fade-up delay-2">
+                                    <div class="contact-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-text">
+                                        <strong>Email Address</strong>
+                                        <a target="_blank" href="mailto:solutions@networkth365.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi Nish,%0D%0AI am writing to ask you about the financial services you offer.">solutions@networkth365.com</a>
+                                    </div>
+                                </li>
 
-                        <li class="contact-item animate-fade-up delay-3">
-                            <div class="contact-text">
-                                <a target="_blank" href="https://wa.me/+13316455913?text=Hi Nish, I am writing to ask you about the financial services you offer.">
-                                    <button class="wpbtn">
-                                        <span class="contact-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-83.77245 -140.29175 726.0279 841.7505"><path d="M407.185 336.283c-6.948-3.478-41.108-20.284-47.477-22.606-6.368-2.318-11-3.476-15.632 3.478-4.632 6.954-17.948 22.606-22.001 27.244-4.052 4.636-8.106 5.218-15.054 1.738-6.948-3.477-29.336-10.813-55.874-34.486-20.655-18.424-34.6-41.176-38.652-48.132-4.054-6.956-.434-10.716 3.045-14.18 3.127-3.114 6.95-8.116 10.423-12.174 3.474-4.056 4.632-6.956 6.948-11.59 2.316-4.639 1.158-8.695-.58-12.172-1.736-3.478-15.632-37.679-21.422-51.592-5.64-13.547-11.368-11.712-15.633-11.927-4.048-.201-8.685-.244-13.316-.244-4.632 0-12.16 1.739-18.53 8.693-6.367 6.956-24.317 23.767-24.317 57.964 0 34.202 24.896 67.239 28.371 71.876 3.475 4.639 48.993 74.818 118.695 104.914 16.576 7.16 29.518 11.434 39.609 14.636 16.644 5.289 31.79 4.542 43.763 2.753 13.349-1.993 41.108-16.807 46.898-33.036 5.79-16.233 5.79-30.144 4.052-33.041-1.736-2.899-6.368-4.638-13.316-8.116m-126.776 173.1h-.093c-41.473-.016-82.15-11.159-117.636-32.216l-8.44-5.01-87.475 22.947 23.348-85.288-5.494-8.745c-23.136-36.798-35.356-79.328-35.338-123 .051-127.431 103.734-231.106 231.22-231.106 61.734.022 119.763 24.094 163.402 67.782 43.636 43.685 67.653 101.754 67.629 163.51-.052 127.442-103.733 231.126-231.123 231.126M477.113 81.55C424.613 28.989 354.795.03 280.407 0 127.136 0 2.392 124.736 2.33 278.053c-.02 49.011 12.784 96.847 37.118 139.019L0 561.167l147.41-38.668c40.617 22.153 86.346 33.83 132.886 33.845h.115c153.254 0 278.009-124.748 278.072-278.068.028-74.301-28.87-144.165-81.37-196.725" fill="currentColor" fill-rule="evenodd"/></svg>
-                                        </span>
-                                        <strong>Message us on WhatsApp</strong>
-                                    </button>
-                                </a>
+                                <li class="contact-item animate-fade-up delay-3">
+                                    <div class="contact-text">
+                                        <a target="_blank" href="https://wa.me/+13316455913?text=Hi Nish, I am writing to ask you about the financial services you offer.">
+                                            <button class="wpbtn">
+                                                <span class="contact-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-83.77245 -140.29175 726.0279 841.7505"><path d="M407.185 336.283c-6.948-3.478-41.108-20.284-47.477-22.606-6.368-2.318-11-3.476-15.632 3.478-4.632 6.954-17.948 22.606-22.001 27.244-4.052 4.636-8.106 5.218-15.054 1.738-6.948-3.477-29.336-10.813-55.874-34.486-20.655-18.424-34.6-41.176-38.652-48.132-4.054-6.956-.434-10.716 3.045-14.18 3.127-3.114 6.95-8.116 10.423-12.174 3.474-4.056 4.632-6.956 6.948-11.59 2.316-4.639 1.158-8.695-.58-12.172-1.736-3.478-15.632-37.679-21.422-51.592-5.64-13.547-11.368-11.712-15.633-11.927-4.048-.201-8.685-.244-13.316-.244-4.632 0-12.16 1.739-18.53 8.693-6.367 6.956-24.317 23.767-24.317 57.964 0 34.202 24.896 67.239 28.371 71.876 3.475 4.639 48.993 74.818 118.695 104.914 16.576 7.16 29.518 11.434 39.609 14.636 16.644 5.289 31.79 4.542 43.763 2.753 13.349-1.993 41.108-16.807 46.898-33.036 5.79-16.233 5.79-30.144 4.052-33.041-1.736-2.899-6.368-4.638-13.316-8.116m-126.776 173.1h-.093c-41.473-.016-82.15-11.159-117.636-32.216l-8.44-5.01-87.475 22.947 23.348-85.288-5.494-8.745c-23.136-36.798-35.356-79.328-35.338-123 .051-127.431 103.734-231.106 231.22-231.106 61.734.022 119.763 24.094 163.402 67.782 43.636 43.685 67.653 101.754 67.629 163.51-.052 127.442-103.733 231.126-231.123 231.126M477.113 81.55C424.613 28.989 354.795.03 280.407 0 127.136 0 2.392 124.736 2.33 278.053c-.02 49.011 12.784 96.847 37.118 139.019L0 561.167l147.41-38.668c40.617 22.153 86.346 33.83 132.886 33.845h.115c153.254 0 278.009-124.748 278.072-278.068.028-74.301-28.87-144.165-81.37-196.725" fill="currentColor" fill-rule="evenodd"/></svg>
+                                                </span>
+                                                <strong>Message us on WhatsApp</strong>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </li>
 
-                            </div>
-                        </li>
+                                <li class="contact-item animate-fade-up delay-4">
+                                    <div class="contact-text">
+                                        <a target="_blank" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                            <button>
+                                                <span class="contact-icon consultation-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                                                </span>
+                                                <strong>Schedule a Consultation</strong>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
 
-                        <li class="contact-item animate-fade-up delay-4">
-                            <div class="contact-text">
-                                <a target="_blank" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
-                                    <button>
-                                        <span class="contact-icon consultation-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
-                                        </span>
-                                        <strong>Schedule a Consultation</strong>
-                                    </button>
-                                </a>
+                        <!-- Second advisor: holds the health license, so this is where health,
+                             Medicare and long-term care inquiries should land. -->
+                        <section class="advisor-contact" aria-labelledby="advisor-2-heading">
+                            <header class="advisor-contact-header">
+                                <h3 class="advisor-contact-name" id="advisor-2-heading">Dinal Soni</h3>
+                                <p class="advisor-contact-role">Life & Health Insurance</p>
+                                <ul class="license-list">
+                                    <li>NPN #22262093</li>
+                                </ul>
+                            </header>
 
-                            </div>
-                        </li>
+                            <ul class="advisor-contact-list">
+                                <!-- Phone -->
+                                <li class="contact-item animate-fade-up delay-1">
+                                    <div class="contact-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-text">
+                                        <strong>Phone Number</strong>
+                                        <a target="_blank" href="tel:+16308089416">(630) 808-9416</a>
+                                    </div>
+                                </li>
 
+                                <!-- Email -->
+                                <li class="contact-item animate-fade-up delay-2">
+                                    <div class="contact-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-text">
+                                        <strong>Email Address</strong>
+                                        <a target="_blank" href="mailto:dinal.networkth365@gmail.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi,%0D%0AI am writing to ask you about the health and long-term care services you offer.">dinal.networkth365@gmail.com</a>
+                                    </div>
+                                </li>
 
-                    </ul>
+                                <li class="contact-item animate-fade-up delay-3">
+                                    <div class="contact-text">
+                                        <a target="_blank" href="https://wa.me/+16308089416?text=Hi,%0D%0AI am writing to ask you about the health and long-term care services you offer.">
+                                            <button class="wpbtn">
+                                                <span class="contact-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-83.77245 -140.29175 726.0279 841.7505"><path d="M407.185 336.283c-6.948-3.478-41.108-20.284-47.477-22.606-6.368-2.318-11-3.476-15.632 3.478-4.632 6.954-17.948 22.606-22.001 27.244-4.052 4.636-8.106 5.218-15.054 1.738-6.948-3.477-29.336-10.813-55.874-34.486-20.655-18.424-34.6-41.176-38.652-48.132-4.054-6.956-.434-10.716 3.045-14.18 3.127-3.114 6.95-8.116 10.423-12.174 3.474-4.056 4.632-6.956 6.948-11.59 2.316-4.639 1.158-8.695-.58-12.172-1.736-3.478-15.632-37.679-21.422-51.592-5.64-13.547-11.368-11.712-15.633-11.927-4.048-.201-8.685-.244-13.316-.244-4.632 0-12.16 1.739-18.53 8.693-6.367 6.956-24.317 23.767-24.317 57.964 0 34.202 24.896 67.239 28.371 71.876 3.475 4.639 48.993 74.818 118.695 104.914 16.576 7.16 29.518 11.434 39.609 14.636 16.644 5.289 31.79 4.542 43.763 2.753 13.349-1.993 41.108-16.807 46.898-33.036 5.79-16.233 5.79-30.144 4.052-33.041-1.736-2.899-6.368-4.638-13.316-8.116m-126.776 173.1h-.093c-41.473-.016-82.15-11.159-117.636-32.216l-8.44-5.01-87.475 22.947 23.348-85.288-5.494-8.745c-23.136-36.798-35.356-79.328-35.338-123 .051-127.431 103.734-231.106 231.22-231.106 61.734.022 119.763 24.094 163.402 67.782 43.636 43.685 67.653 101.754 67.629 163.51-.052 127.442-103.733 231.126-231.123 231.126M477.113 81.55C424.613 28.989 354.795.03 280.407 0 127.136 0 2.392 124.736 2.33 278.053c-.02 49.011 12.784 96.847 37.118 139.019L0 561.167l147.41-38.668c40.617 22.153 86.346 33.83 132.886 33.845h.115c153.254 0 278.009-124.748 278.072-278.068.028-74.301-28.87-144.165-81.37-196.725" fill="currentColor" fill-rule="evenodd"/></svg>
+                                                </span>
+                                                <strong>Message us on WhatsApp</strong>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="contact-item animate-fade-up delay-4">
+                                    <div class="contact-text">
+                                        <a target="_blank" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                            <button>
+                                                <span class="contact-icon consultation-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                                                </span>
+                                                <strong>Schedule a Consultation</strong>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
 
                     <!-- Social Media Links -->
 <!--                    <div class="contact-social animate-on-scroll">-->
@@ -922,16 +1073,33 @@
                         <!-- Service Selection -->
                         <div class="form-group">
                             <label for="contact-service" class="form-label">Service Interested In *</label>
+                            <!-- Service options are grouped by advisor because health / Medicare / long-term care
+                     inquiries must reach the advisor who actually holds the health license.
+                     Keep the id="{value}-opt" convention - main.js relies on it to map a
+                     selected value back to a human-readable label. -->
                             <select id="contact-service" name="service" required class="form-input form-select">
                                 <option id="emptyopt" value="">Select a service...</option>
-                                <option value="side-income" id="side-income-opt">Side Income (Part-time) Opportunity</option>
-                                <option id="life-insurance-opt" value="life-insurance">Life Insurance Planning</option>
-                                <option id="retirement-planning-opt" value="retirement-planning">Retirement Planning</option>
-                                <option id="education-planning-opt" value="education-planning">Kids' Education Planning</option>
-                                <option id="estate-planning-opt" value="estate-planning">Estate Planning</option>
-                                <option id="lifetime-income-planning-opt" value="lifetime-income-planning">Lifetime Income Planning</option>
-                                <option id="other-opt" value="other">Other</option>
+                                <optgroup label="Life Insurance &amp; Wealth Planning">
+                                    <option id="life-insurance-opt" value="life-insurance">Life Insurance Planning</option>
+                                    <option id="retirement-planning-opt" value="retirement-planning">Retirement Planning</option>
+                                    <option id="education-planning-opt" value="education-planning">Kids' Education Planning</option>
+                                    <option id="estate-planning-opt" value="estate-planning">Estate Planning</option>
+                                    <option id="lifetime-income-planning-opt" value="lifetime-income-planning">Lifetime Income Planning</option>
+                                </optgroup>
+                                <optgroup label="Health, Medicare &amp; Long-Term Care (Dinal Soni)">
+                                    <option id="medicare-opt" value="medicare">Medicare</option>
+                                    <option id="health-insurance-opt" value="health-insurance">Health Insurance</option>
+                                    <option id="long-term-care-opt" value="long-term-care">Long-Term Care</option>
+                                </optgroup>
+                                <optgroup label="General">
+                                    <option value="side-income" id="side-income-opt">Side Income (Part-time) Opportunity</option>
+                                    <option id="other-opt" value="other">Other</option>
+                                </optgroup>
                             </select>
+                            <!-- TODO(compliance): Health and Medicare lines of business usually require
+                                 specific disclosures near the enrollment form (e.g. certified Marketplace
+                                 enrollment agent status, and "not affiliated with any health insurance
+                                 company" style language). Add them here before going live. -->
                             <span class="form-error" id="service-error"></span>
                         </div>
 
@@ -1055,10 +1223,7 @@
             <!-- Footer Brand -->
             <div class="footer-brand animate-fade-right">
                 <a href="#home" class="footer-logo" aria-label="Networkth365 Home">
-                    <span class="logo-text">
-                        <img src="src/media/brand/transparent-logo-full.png" width="256" alt="Networkth365 Logo">
-                        <span class="logo-title">Network<span class="logo-accent dark">th</span><span class="logo-accent">365</span></span>
-                    </span>
+                    <img src="src/media/brand/logowhite.png" alt="Networkth365">
                 </a>
                 <p class="footer-tagline">Safeguard Your Legacy, Grow Your Wealth.</p>
                 <p class="footer-description">
@@ -1091,6 +1256,9 @@
                         <li><a class="service-option-link" href="#services">Kids' Education Planning</a></li>
                         <li><a class="service-option-link" href="#services">Estate Planning</a></li>
                         <li><a class="service-option-link" href="#services">Lifetime Income Planning</a></li>
+                        <li><a class="service-option-link" href="#services">Medicare</a></li>
+                        <li><a class="service-option-link" href="#services">Health Insurance</a></li>
+                        <li><a class="service-option-link" href="#services">Long-Term Care</a></li>
 
                     </ul>
                 </div>
@@ -1108,16 +1276,30 @@
 
                 <div class="footer-column animate-fade-right delay-4">
                     <h5 class="footer-heading">Contact</h5>
-                    <ul class="footer-list footer-list--contact">
-                        <li>
-                            <strong>Phone:</strong><br>
-                            <a target="_blank" href="tel:+13316455913">+1 (331) 645-5913</a>
-                        </li>
-                        <li>
-                            <strong>Email:</strong><br>
-                            <a target="_blank" href="mailto:solutions@networkth365.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi Nish,%0D%0AI am writing to ask you about the financial services you offer.">solutions@networkth365.com</a>
-                        </li>
-                    </ul>
+                    <div class="footer-contact">
+                        <p class="footer-contact-name">Nishant Soni</p>
+                        <p class="footer-contact-role">Life Insurance &amp; Wealth Planning</p>
+                        <ul class="footer-list footer-list--contact">
+                            <li>
+                                <a target="_blank" href="tel:+13316455913">+1 (331) 645-5913</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="mailto:solutions@networkth365.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi Nish,%0D%0AI am writing to ask you about the financial services you offer.">solutions@networkth365.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <p class="footer-contact-name">Dinal Soni</p>
+                        <p class="footer-contact-role">Life &amp; Health Insurance</p>
+                        <ul class="footer-list footer-list--contact">
+                            <li>
+                                <a target="_blank" href="tel:+16308089416">(630) 808-9416</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="mailto:dinal.networkth365@gmail.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi,%0D%0AI am writing to ask you about the health and long-term care services you offer.">dinal.networkth365@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1125,7 +1307,8 @@
         <!-- Footer Bottom -->
         <div class="footer-bottom animate-fade-up delay-6">
             <p class="footer-copyright">
-                &copy; <span id="current-year">2026</span> Networkth365. All rights reserved.
+                &copy; <span id="current-year">2026</span> Networkth365. All rights reserved.<br>
+                Designed by <a class="footer-credit-link" href="https://aasoni.dev" target="_blank" rel="noopener noreferrer">Aaryan Soni</a>
             </p>
             <div class="footer-social">
                 <!-- Replace # with actual social media URLs -->
@@ -1151,7 +1334,11 @@
 <!--                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>-->
 <!--                    </svg>-->
 <!--                </a>-->
-                <a target="_blank" href="https://wa.me/+13316455913?text=Hello! I'm interested in securing my family's future." class="social-link wp-link" aria-label="Follow us on WhatsApp">
+                <!-- One WhatsApp button per advisor so each message reaches the right person. -->
+                <a target="_blank" href="https://wa.me/+13316455913?text=Hello! I'm interested in securing my family's future." class="social-link wp-link" aria-label="Message Nishant Soni on WhatsApp" title="WhatsApp - Nishant Soni">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-83.77245 -140.29175 726.0279 841.7505"><path d="M407.185 336.283c-6.948-3.478-41.108-20.284-47.477-22.606-6.368-2.318-11-3.476-15.632 3.478-4.632 6.954-17.948 22.606-22.001 27.244-4.052 4.636-8.106 5.218-15.054 1.738-6.948-3.477-29.336-10.813-55.874-34.486-20.655-18.424-34.6-41.176-38.652-48.132-4.054-6.956-.434-10.716 3.045-14.18 3.127-3.114 6.95-8.116 10.423-12.174 3.474-4.056 4.632-6.956 6.948-11.59 2.316-4.639 1.158-8.695-.58-12.172-1.736-3.478-15.632-37.679-21.422-51.592-5.64-13.547-11.368-11.712-15.633-11.927-4.048-.201-8.685-.244-13.316-.244-4.632 0-12.16 1.739-18.53 8.693-6.367 6.956-24.317 23.767-24.317 57.964 0 34.202 24.896 67.239 28.371 71.876 3.475 4.639 48.993 74.818 118.695 104.914 16.576 7.16 29.518 11.434 39.609 14.636 16.644 5.289 31.79 4.542 43.763 2.753 13.349-1.993 41.108-16.807 46.898-33.036 5.79-16.233 5.79-30.144 4.052-33.041-1.736-2.899-6.368-4.638-13.316-8.116m-126.776 173.1h-.093c-41.473-.016-82.15-11.159-117.636-32.216l-8.44-5.01-87.475 22.947 23.348-85.288-5.494-8.745c-23.136-36.798-35.356-79.328-35.338-123 .051-127.431 103.734-231.106 231.22-231.106 61.734.022 119.763 24.094 163.402 67.782 43.636 43.685 67.653 101.754 67.629 163.51-.052 127.442-103.733 231.126-231.123 231.126M477.113 81.55C424.613 28.989 354.795.03 280.407 0 127.136 0 2.392 124.736 2.33 278.053c-.02 49.011 12.784 96.847 37.118 139.019L0 561.167l147.41-38.668c40.617 22.153 86.346 33.83 132.886 33.845h.115c153.254 0 278.009-124.748 278.072-278.068.028-74.301-28.87-144.165-81.37-196.725" fill="currentColor" fill-rule="evenodd"/></svg>
+                </a>
+                <a target="_blank" href="https://wa.me/+16308089416?text=Hello! I'm interested in health and long-term care coverage." class="social-link wp-link" aria-label="Message Dinal Soni on WhatsApp" title="WhatsApp - Dinal Soni">
                     <svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-83.77245 -140.29175 726.0279 841.7505"><path d="M407.185 336.283c-6.948-3.478-41.108-20.284-47.477-22.606-6.368-2.318-11-3.476-15.632 3.478-4.632 6.954-17.948 22.606-22.001 27.244-4.052 4.636-8.106 5.218-15.054 1.738-6.948-3.477-29.336-10.813-55.874-34.486-20.655-18.424-34.6-41.176-38.652-48.132-4.054-6.956-.434-10.716 3.045-14.18 3.127-3.114 6.95-8.116 10.423-12.174 3.474-4.056 4.632-6.956 6.948-11.59 2.316-4.639 1.158-8.695-.58-12.172-1.736-3.478-15.632-37.679-21.422-51.592-5.64-13.547-11.368-11.712-15.633-11.927-4.048-.201-8.685-.244-13.316-.244-4.632 0-12.16 1.739-18.53 8.693-6.367 6.956-24.317 23.767-24.317 57.964 0 34.202 24.896 67.239 28.371 71.876 3.475 4.639 48.993 74.818 118.695 104.914 16.576 7.16 29.518 11.434 39.609 14.636 16.644 5.289 31.79 4.542 43.763 2.753 13.349-1.993 41.108-16.807 46.898-33.036 5.79-16.233 5.79-30.144 4.052-33.041-1.736-2.899-6.368-4.638-13.316-8.116m-126.776 173.1h-.093c-41.473-.016-82.15-11.159-117.636-32.216l-8.44-5.01-87.475 22.947 23.348-85.288-5.494-8.745c-23.136-36.798-35.356-79.328-35.338-123 .051-127.431 103.734-231.106 231.22-231.106 61.734.022 119.763 24.094 163.402 67.782 43.636 43.685 67.653 101.754 67.629 163.51-.052 127.442-103.733 231.126-231.123 231.126M477.113 81.55C424.613 28.989 354.795.03 280.407 0 127.136 0 2.392 124.736 2.33 278.053c-.02 49.011 12.784 96.847 37.118 139.019L0 561.167l147.41-38.668c40.617 22.153 86.346 33.83 132.886 33.845h.115c153.254 0 278.009-124.748 278.072-278.068.028-74.301-28.87-144.165-81.37-196.725" fill="currentColor" fill-rule="evenodd"/></svg>
                 </a>
             </div>

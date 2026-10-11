@@ -154,6 +154,7 @@
 html {
 	scroll-behavior: initial !important;
 	-webkit-text-size-adjust: 100%;
+	scroll-margin-top: 80px;
 }
 
 body {
@@ -268,6 +269,10 @@ h6 {
 
 p {
 	margin-bottom: var(--space-4);
+}
+
+.lucide {
+	min-width: 16px;
 }
 
 p:last-child {

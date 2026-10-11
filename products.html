@@ -73,22 +73,23 @@
     <header class="header" id="header">
         <nav class="nav container" aria-label="Main navigation">
             <!-- Logo -->
-            <a href="/#home" class="nav-logo" aria-label="Networkth365 Home">
-                <!-- Replace with actual logo -->
-                <img src="src/media/brand/transparent-logo-full.png" alt="Networkth365 Logo">
-                <span class="logo-text">Network<span class="logo-accent dark">th</span><span class="logo-accent">365</span></span>
+            <a href="index.html#home" class="nav-logo" aria-label="Networkth365 Home">
+                <img src="src/media/brand/logoblue.png" alt="Networkth365">
             </a>
 
             <!-- Navigation Menu -->
             <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-menu-title" role="none">
+                    <h2 class="nav-menu-title-heading">What are you looking for?</h2>
+                </li>
                 <li class="nav-item hide" role="none">
-                    <a href="/#home" class="nav-link" role="menuitem">Home</a>
+                    <a href="index.html#home" class="nav-link" role="menuitem">Home</a>
                 </li>
                 <li class="nav-item" role="none">
-                    <a href="/#about" class="nav-link" role="menuitem">About</a>
+                    <a href="index.html#about" class="nav-link" role="menuitem">About</a>
                 </li>
                 <li class="nav-item hide" role="none">
-                    <a href="/#partners" class="nav-link" role="menuitem">Providers</a>
+                    <a href="index.html#partners" class="nav-link" role="menuitem">Providers</a>
                 </li>
                 <li class="nav-item hide" role="none">
                     <a href="/#services" class="nav-link" role="menuitem">Services</a>
@@ -97,10 +98,10 @@
                     <a href="./products.html" class="nav-link active" role="menuitem">Products</a>
                 </li>
 <!--                <li class="nav-item" role="none">-->
-<!--                    <a href="/#testimonials" class="nav-link" role="menuitem">Testimonials</a>-->
+<!--                    <a href="index.html#testimonials" class="nav-link" role="menuitem">Testimonials</a>-->
 <!--                </li>-->
                 <li class="nav-item" role="none">
-                    <a href="/#contact" class="nav-link" role="menuitem">Contact</a>
+                    <a href="index.html#contact" class="nav-link" role="menuitem">Contact</a>
                 </li>
                 <li class="nav-item hide" role="none">
                     <a href="./gallery.html" class="nav-link" role="menuitem">Gallery</a>
@@ -117,7 +118,10 @@
             </ul>
 
             <!-- CTA Button -->
-            <a href="/#contact" class="nav-cta btn btn--primary">Contact Us</a>
+            <a href="index.html#contact" class="nav-cta btn btn--primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                Contact Us
+            </a>
 
             <!-- Mobile Menu Toggle -->
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -142,7 +146,7 @@
 <!--        </section>-->
 
         <section id="life-insurance" class="service life-insurance">
-            <h3 class="service-card-title animate-on-scroll">Products</h3>
+            <h3 class="service-card-title animate-on-scroll">Life Insurance</h3>
             <p class="service-card-description animate-on-scroll">
                 From protecting your family with life insurance to planning for retirement,
                 we provide tailored solutions to meet your unique financial goals.
@@ -157,9 +161,20 @@
                     <p class="service-card-description">
                         Straightforward coverage for the years you need it most. Protect temporary responsibilities with confidence.
                     </p>
-                    <a class="service-card-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
-                        Learn More <span aria-hidden="true">→</span>
-                    </a>
+
+                    <div class="service-links-container">
+<!--											TODO: add flyers for other links -->
+<!--											<a class="service-popup-link" data-img="flyers/placeholder-flyer.svg">-->
+<!--												<span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span >Learn More-->
+<!--											</a>-->
+                        <button class="service-schedule-button btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            <a class="service-schedule-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                Schedule Call <span aria-hidden="true">→</span>
+                            </a>
+                        </button>
+                    </div>
+
                 </article>
 
                 <article class="service-card animate-on-scroll" data-delay="0">
@@ -170,9 +185,17 @@
                     <p class="service-card-description">
                         Death benefit protection plus portfolio diversification with the potential for tax-free withdrawals.
                     </p>
-                    <a class="service-card-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
-                        Learn More <span aria-hidden="true">→</span>
-                    </a>
+                    <div class="service-links-container">
+<!--                        <a class="service-popup-link" data-img="flyers/netlaw-pricing.jpeg">-->
+<!--                            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span >Learn More-->
+<!--                        </a>-->
+                        <button class="service-schedule-button btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            <a class="service-schedule-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                Schedule Call <span aria-hidden="true">→</span>
+                            </a>
+                        </button>
+                    </div>
                 </article>
 
                 <article class="service-card animate-on-scroll" data-delay="0">
@@ -183,9 +206,17 @@
                     <p class="service-card-description">
                         Lifetime coverage with guaranteed benefits and cash value that can grow over time.
                     </p>
-                    <a class="service-card-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
-                        Learn More <span aria-hidden="true">→</span>
-                    </a>
+                    <div class="service-links-container">
+<!--                        <a class="service-popup-link" data-img="flyers/placeholder-flyer.svg">-->
+<!--                            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span >Learn More-->
+<!--                        </a>-->
+                        <button class="service-schedule-button btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            <a class="service-schedule-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                Schedule Call <span aria-hidden="true">→</span>
+                            </a>
+                        </button>
+                    </div>
                 </article>
 
                 <article class="service-card animate-on-scroll" data-delay="0">
@@ -196,9 +227,18 @@
                     <p class="service-card-description">
                         Establish your Will & Trust plus four other core estate documents to protect wishes and heirs.
                     </p>
-                    <a class="service-card-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
-                        Learn More <span aria-hidden="true">→</span>
-                    </a>
+                    <div class="service-links-container">
+                    
+											<a class="service-popup-link" data-img="flyers/netlaw-pricing.jpeg">
+												<span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span >Learn More
+											</a>
+                        <button class="service-schedule-button btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            <a class="service-schedule-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                Schedule Call <span aria-hidden="true">→</span>
+                            </a>
+                        </button>
+                    </div>
                 </article>
 
                 <article class="service-card animate-on-scroll" data-delay="100">
@@ -209,9 +249,18 @@
                     <p class="service-card-description">
                         A contract with an insurer that can guarantee principal and interest while offering potential lifelong income withdrawals.
                     </p>
-                    <a class="service-card-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
-                        Learn More <span aria-hidden="true">→</span>
-                    </a>
+                    <div class="service-links-container">
+                        <!-- TODO(assets): replace placeholder-flyer.svg with the Fixed & Indexed Annuities flyer image. -->
+<!--                        <a class="service-popup-link" data-img="flyers/placeholder-flyer.svg">-->
+<!--                            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span >Learn More-->
+<!--                        </a>-->
+                        <button class="service-schedule-button btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            <a class="service-schedule-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                Schedule Call <span aria-hidden="true">→</span>
+                            </a>
+                        </button>
+                    </div>
                 </article>
 
 <!--                <article class="service-card animate-on-scroll" data-delay="200">-->
@@ -222,13 +271,105 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Plan for the retirement you deserve so you don't have to rely on just your assets.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
 
             </div>
         </section>
+
+        <section id="health-care" class="service health-care">
+            <h3 class="service-card-title animate-on-scroll">Health Insurance</h3>
+            <p class="service-card-description animate-on-scroll">
+                Coverage for your health today and your care needs later. Guided by
+                Dinal Soni, a licensed health and life advisor.
+            </p>
+            <div class="services-grid">
+
+                <article class="service-card animate-on-scroll" data-delay="0">
+                    <div class="service-card-icon">
+                        <img src="https://media.istockphoto.com/id/1047505000/photo/medicare-health-insurance-card.jpg?s=612x612&w=0&k=20&c=Q-a8HDKaPTyZzzlS-MWfyme2OiPi0X7BD3fUaJHXeTA=" alt="Medicare illustration">
+                    </div>
+                    <h3 class="service-card-title">Medicare</h3>
+                    <p class="service-card-description">
+                        Original Medicare leaves gaps. We walk through Advantage and Supplement
+                        side by side - premiums, networks, out-of-pocket maximums, and how each
+                        handles prescriptions - so the choice is made on numbers, not salesmanship.
+                    </p>
+                    <div class="service-links-container">
+                        <!-- TODO(assets): replace placeholder-flyer.svg with the Medicare flyer image. -->
+<!--                        <a class="service-popup-link" data-img="flyers/placeholder-flyer.svg">-->
+<!--                            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span >Learn More-->
+<!--                        </a>-->
+                        <button class="service-schedule-button btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            <a class="service-schedule-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                Schedule Call <span aria-hidden="true">→</span>
+                            </a>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="service-card animate-on-scroll" data-delay="100">
+                    <div class="service-card-icon">
+                        <img src="https://t4.ftcdn.net/jpg/03/00/14/87/360_F_300148775_zAEm25PtY6D39qRHYlNSuc1BDNqmQvzF.jpg" alt="health insurance illustration">
+                    </div>
+                    <h3 class="service-card-title">Health Insurance</h3>
+                    <p class="service-card-description">
+                        Coverage for you, your family, or your business. We help you compare plan
+                        designs and totals, and understand whether you qualify for subsidies before
+                        you enroll - including what happens at the next open enrollment.
+                    </p>
+                    <div class="service-links-container">
+                        <!-- TODO(assets): replace placeholder-flyer.svg with the Individual & Family Health flyer image. -->
+<!--                        <a class="service-popup-link" data-img="flyers/placeholder-flyer.svg">-->
+<!--                            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span >Learn More-->
+<!--                        </a>-->
+                        <button class="service-schedule-button btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            <a class="service-schedule-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                Schedule Call <span aria-hidden="true">→</span>
+                            </a>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="service-card animate-on-scroll" data-delay="200">
+                    <div class="service-card-icon">
+                        <img src="https://t3.ftcdn.net/jpg/06/02/64/78/360_F_602647850_H3RamySxVR9g83pfyDgE4FPartzSKNfU.jpg" alt="Long-Term Care illustration">
+                    </div>
+                    <h3 class="service-card-title">Long-Term Care</h3>
+                    <p class="service-card-description">
+                        Home care, assisted living, and skilled nursing can run into six figures a
+                        year. Decide now whether to self-insure, insure part of the cost, or protect
+                        a portion of your savings - while you still qualify.
+                    </p>
+                    <div class="service-links-container">
+                        <!-- TODO(assets): replace placeholder-flyer.svg with the Long-Term Care flyer image. -->
+<!--                        <a class="service-popup-link" data-img="flyers/placeholder-flyer.svg">-->
+<!--                            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span >Learn More-->
+<!--                        </a>-->
+                        <button class="service-schedule-button btn btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            <a class="service-schedule-link" onclick="Calendly.initPopupWidget({url:'https://calendly.com/networkth365/free_consultation'});return false;">
+                                Schedule Call <span aria-hidden="true">→</span>
+                            </a>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <div class="modal" id="imgModal">
+            <div class="modal-content">
+                <button class="close-btn" id="closeBtn">&times;</button>
+                <img id="popupImage" src="flyers/placeholder-flyer.svg" alt="Product flyer">
+            </div>
+        </div>
+
 
 <!--        <section id="kids-ed" class="service kids-ed">-->
 <!--            <h3 class="service-card-title animate-on-scroll">Kids' Education Planning</h3>-->
@@ -246,7 +387,7 @@
 <!--                        Protect your loved ones with right-sized coverage with living benefits and a quote that fits your budget.-->
 <!--                        &lt;!&ndash;                        Term life, whole life, or indexed universal life.&ndash;&gt;-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -259,7 +400,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Choose a smart, disciplined path to fund your children’s education.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -271,7 +412,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Plan for the retirement you deserve so you don't have to rely on just your assets.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -284,7 +425,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Create a pension and secure predictable, lifetime income streams.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -297,7 +438,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Protect what you’ve built from probate, litigation, and unfavorable taxation.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -322,7 +463,7 @@
 <!--                        Protect your loved ones with right-sized coverage with living benefits and a quote that fits your budget.-->
 <!--                        &lt;!&ndash;                        Term life, whole life, or indexed universal life.&ndash;&gt;-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -335,7 +476,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Choose a smart, disciplined path to fund your children’s education.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -347,7 +488,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Plan for the retirement you deserve so you don't have to rely on just your assets.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -360,7 +501,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Create a pension and secure predictable, lifetime income streams.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -373,7 +514,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Protect what you’ve built from probate, litigation, and unfavorable taxation.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -398,7 +539,7 @@
 <!--                        Protect your loved ones with right-sized coverage with living benefits and a quote that fits your budget.-->
 <!--                        &lt;!&ndash;                        Term life, whole life, or indexed universal life.&ndash;&gt;-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -411,7 +552,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Choose a smart, disciplined path to fund your children’s education.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -423,7 +564,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Plan for the retirement you deserve so you don't have to rely on just your assets.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -436,7 +577,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Create a pension and secure predictable, lifetime income streams.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -449,7 +590,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Protect what you’ve built from probate, litigation, and unfavorable taxation.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -474,7 +615,7 @@
 <!--                        Protect your loved ones with right-sized coverage with living benefits and a quote that fits your budget.-->
 <!--                        &lt;!&ndash;                        Term life, whole life, or indexed universal life.&ndash;&gt;-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -487,7 +628,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Choose a smart, disciplined path to fund your children’s education.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -499,7 +640,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Plan for the retirement you deserve so you don't have to rely on just your assets.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -512,7 +653,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Create a pension and secure predictable, lifetime income streams.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -525,7 +666,7 @@
 <!--                    <p class="service-card-description">-->
 <!--                        Protect what you’ve built from probate, litigation, and unfavorable taxation.-->
 <!--                    </p>-->
-<!--                    <a href="/#contact" class="service-card-link">-->
+<!--                    <a href="index.html#contact" class="service-card-link">-->
 <!--                        Learn More <span aria-hidden="true">→</span>-->
 <!--                    </a>-->
 <!--                </article>-->
@@ -545,11 +686,8 @@
             <div class="footer-top">
                 <!-- Footer Brand -->
                 <div class="footer-brand animate-fade-right">
-                    <a href="/#home" class="footer-logo" aria-label="Networkth365 Home">
-                    <span class="logo-text">
-                        <img src="src/media/brand/transparent-logo-full.png" width="256" alt="Networkth365 Logo">
-                        <span class="logo-title">Network<span class="logo-accent dark">th</span><span class="logo-accent">365</span></span>
-                    </span>
+                    <a href="index.html#home" class="footer-logo" aria-label="Networkth365 Home">
+                    <img src="src/media/brand/logowhite.png" alt="Networkth365">
                     </a>
                     <p class="footer-tagline">Safeguard Your Legacy, Grow Your Wealth.</p>
                     <p class="footer-description">
@@ -562,14 +700,14 @@
                     <div class="footer-column animate-fade-right delay-2">
                         <h5 class="footer-heading">Quick Links</h5>
                         <ul class="footer-list">
-                            <li><a href="/#home">Home</a></li>
-                            <li><a href="/#about">About Us</a></li>
-                            <li><a href="/#partners">Partners</a></li>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#partners">Partners</a></li>
                             <li><a href="/#services">Services</a></li>
-                            <li><a href="#">Products</a></li>
+                            <li><a href="./products.html">Products</a></li>
                             <li><a href="./gallery.html">Gallery</a></li>
                             <!--                        <li><a href="#testimonials">Testimonials</a></li>-->
-                            <li><a href="/#contact">Contact</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
                         </ul>
                     </div>
 
@@ -578,12 +716,15 @@
                         <ul class="footer-list">
 <!--                            TODO: autoselect form opt when clicking these li-->
                             <li><a class="service-option-link" href="/#services">Life Insurance Planning</a></li>
-                            <!--                        <li><a href="#services">Home Insurance</a></li>-->
-                            <!--                        <li><a href="#services">Auto Insurance</a></li>-->
+                            <!--                        <li><a href="/#services">Home Insurance</a></li>-->
+                            <!--                        <li><a href="/#services">Auto Insurance</a></li>-->
                             <li><a href="/#services">Retirement Planning</a></li>
                             <li><a class="service-option-link" href="/#services">Kids' Education Planning</a></li>
                             <li><a class="service-option-link" href="/#services">Estate Planning</a></li>
                             <li><a class="service-option-link" href="/#services">Lifetime Income Planning</a></li>
+                            <li><a class="service-option-link" href="/#services">Medicare</a></li>
+                            <li><a class="service-option-link" href="/#services">Health Insurance</a></li>
+                            <li><a class="service-option-link" href="/#services">Long-Term Care</a></li>
 
                         </ul>
                     </div>
@@ -601,16 +742,30 @@
 
                     <div class="footer-column animate-fade-right delay-5">
                         <h5 class="footer-heading">Contact</h5>
-                        <ul class="footer-list footer-list--contact">
-                            <li>
-                                <strong>Phone:</strong><br>
-                                <a target="_blank" href="tel:+13316455913">+1 (331) 645-5913</a>
-                            </li>
-                            <li>
-                                <strong>Email:</strong><br>
-                                <a target="_blank" href="mailto:solutions@networkth365.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi Nish,%0D%0AI am writing to ask you about the financial services you offer.">solutions@networkth365.com</a>
-                            </li>
-                        </ul>
+                        <div class="footer-contact">
+                            <p class="footer-contact-name">Nishant Soni</p>
+                            <p class="footer-contact-role">Life Insurance &amp; Wealth Planning</p>
+                            <ul class="footer-list footer-list--contact">
+                                <li>
+                                    <a target="_blank" href="tel:+13316455913">+1 (331) 645-5913</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="mailto:solutions@networkth365.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi Nish,%0D%0AI am writing to ask you about the financial services you offer.">solutions@networkth365.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-contact">
+                            <p class="footer-contact-name">Dinal Soni</p>
+                            <p class="footer-contact-role">Life &amp; Health Insurance</p>
+                            <ul class="footer-list footer-list--contact">
+                                <li>
+                                    <a target="_blank" href="tel:+16308089416">(630) 808-9416</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="mailto:dinal.networkth365@gmail.com?subject=Message%20From%20Networkth365%20Homepage&body=Hi,%0D%0AI am writing to ask you about the health and long-term care services you offer.">dinal.networkth365@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -618,7 +773,8 @@
             <!-- Footer Bottom -->
             <div class="footer-bottom animate-fade-up delay-6">
                 <p class="footer-copyright">
-                    &copy; <span id="current-year">2026</span> Networkth365. All rights reserved.
+                    &copy; <span id="current-year">2026</span> Networkth365. All rights reserved.<br>
+                    Designed by <a class="footer-credit-link" href="https://aasoni.dev" target="_blank" rel="noopener noreferrer">Aaryan Soni</a>
                 </p>
                 <div class="footer-social">
                     <!-- Replace # with actual social media URLs -->
@@ -644,7 +800,11 @@
                     <!--                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>-->
                     <!--                    </svg>-->
                     <!--                </a>-->
-                    <a target="_blank" href="https://wa.me/+13316455913?text=Hello! I'm interested in securing my family's future." class="social-link wp-link" aria-label="Follow us on WhatsApp">
+                    <!-- One WhatsApp button per advisor so each message reaches the right person. -->
+                    <a target="_blank" href="https://wa.me/+13316455913?text=Hello! I'm interested in securing my family's future." class="social-link wp-link" aria-label="Message Nishant Soni on WhatsApp" title="WhatsApp - Nishant Soni">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-83.77245 -140.29175 726.0279 841.7505"><path d="M407.185 336.283c-6.948-3.478-41.108-20.284-47.477-22.606-6.368-2.318-11-3.476-15.632 3.478-4.632 6.954-17.948 22.606-22.001 27.244-4.052 4.636-8.106 5.218-15.054 1.738-6.948-3.477-29.336-10.813-55.874-34.486-20.655-18.424-34.6-41.176-38.652-48.132-4.054-6.956-.434-10.716 3.045-14.18 3.127-3.114 6.95-8.116 10.423-12.174 3.474-4.056 4.632-6.956 6.948-11.59 2.316-4.639 1.158-8.695-.58-12.172-1.736-3.478-15.632-37.679-21.422-51.592-5.64-13.547-11.368-11.712-15.633-11.927-4.048-.201-8.685-.244-13.316-.244-4.632 0-12.16 1.739-18.53 8.693-6.367 6.956-24.317 23.767-24.317 57.964 0 34.202 24.896 67.239 28.371 71.876 3.475 4.639 48.993 74.818 118.695 104.914 16.576 7.16 29.518 11.434 39.609 14.636 16.644 5.289 31.79 4.542 43.763 2.753 13.349-1.993 41.108-16.807 46.898-33.036 5.79-16.233 5.79-30.144 4.052-33.041-1.736-2.899-6.368-4.638-13.316-8.116m-126.776 173.1h-.093c-41.473-.016-82.15-11.159-117.636-32.216l-8.44-5.01-87.475 22.947 23.348-85.288-5.494-8.745c-23.136-36.798-35.356-79.328-35.338-123 .051-127.431 103.734-231.106 231.22-231.106 61.734.022 119.763 24.094 163.402 67.782 43.636 43.685 67.653 101.754 67.629 163.51-.052 127.442-103.733 231.126-231.123 231.126M477.113 81.55C424.613 28.989 354.795.03 280.407 0 127.136 0 2.392 124.736 2.33 278.053c-.02 49.011 12.784 96.847 37.118 139.019L0 561.167l147.41-38.668c40.617 22.153 86.346 33.83 132.886 33.845h.115c153.254 0 278.009-124.748 278.072-278.068.028-74.301-28.87-144.165-81.37-196.725" fill="currentColor" fill-rule="evenodd"/></svg>
+                    </a>
+                    <a target="_blank" href="https://wa.me/+16308089416?text=Hello! I'm interested in health and long-term care coverage." class="social-link wp-link" aria-label="Message Dinal Soni on WhatsApp" title="WhatsApp - Dinal Soni">
                         <svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-83.77245 -140.29175 726.0279 841.7505"><path d="M407.185 336.283c-6.948-3.478-41.108-20.284-47.477-22.606-6.368-2.318-11-3.476-15.632 3.478-4.632 6.954-17.948 22.606-22.001 27.244-4.052 4.636-8.106 5.218-15.054 1.738-6.948-3.477-29.336-10.813-55.874-34.486-20.655-18.424-34.6-41.176-38.652-48.132-4.054-6.956-.434-10.716 3.045-14.18 3.127-3.114 6.95-8.116 10.423-12.174 3.474-4.056 4.632-6.956 6.948-11.59 2.316-4.639 1.158-8.695-.58-12.172-1.736-3.478-15.632-37.679-21.422-51.592-5.64-13.547-11.368-11.712-15.633-11.927-4.048-.201-8.685-.244-13.316-.244-4.632 0-12.16 1.739-18.53 8.693-6.367 6.956-24.317 23.767-24.317 57.964 0 34.202 24.896 67.239 28.371 71.876 3.475 4.639 48.993 74.818 118.695 104.914 16.576 7.16 29.518 11.434 39.609 14.636 16.644 5.289 31.79 4.542 43.763 2.753 13.349-1.993 41.108-16.807 46.898-33.036 5.79-16.233 5.79-30.144 4.052-33.041-1.736-2.899-6.368-4.638-13.316-8.116m-126.776 173.1h-.093c-41.473-.016-82.15-11.159-117.636-32.216l-8.44-5.01-87.475 22.947 23.348-85.288-5.494-8.745c-23.136-36.798-35.356-79.328-35.338-123 .051-127.431 103.734-231.106 231.22-231.106 61.734.022 119.763 24.094 163.402 67.782 43.636 43.685 67.653 101.754 67.629 163.51-.052 127.442-103.733 231.126-231.123 231.126M477.113 81.55C424.613 28.989 354.795.03 280.407 0 127.136 0 2.392 124.736 2.33 278.053c-.02 49.011 12.784 96.847 37.118 139.019L0 561.167l147.41-38.668c40.617 22.153 86.346 33.83 132.886 33.845h.115c153.254 0 278.009-124.748 278.072-278.068.028-74.301-28.87-144.165-81.37-196.725" fill="currentColor" fill-rule="evenodd"/></svg>
                     </a>
                 </div>

@@ -142,12 +142,60 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     elements.header.classList.add("is-scrolled")
 
+    // Mobile hide-on-scroll: header slides out of view when scrolling down,
+    // and reappears on scroll up or after a period of inactivity.
+    const mobileNavQuery = window.matchMedia("(max-width: 1024px)")
+    const HEADER_HIDE_THRESHOLD = 80
+    const HEADER_REVEAL_DELAY = 3000
+    let lastScrollY = window.scrollY
+    let headerRevealTimer = null
+
+    function setHeaderHidden(hidden) {
+        if (elements.header) {
+            elements.header.classList.toggle("header--hidden", hidden)
+        }
+    }
+
+    function clearHeaderRevealTimer() {
+        if (headerRevealTimer) {
+            clearTimeout(headerRevealTimer)
+            headerRevealTimer = null
+        }
+    }
+
+    function scheduleHeaderReveal() {
+        clearHeaderRevealTimer()
+        headerRevealTimer = setTimeout(() => setHeaderHidden(false), HEADER_REVEAL_DELAY)
+    }
+
+    /**
+     * Update header style on scroll
+     * Reveals the header while scrolling up or when idle on mobile
+     */
     function handleHeaderScroll() {
-        // if (window.scrollY > 50) {
-        //     elements.header.classList.add("is-scrolled")
-        // } else {
-        //     elements.header.classList.remove("is-scrolled")
-        // }
+        if (!elements.header) return
+
+        const menuOpen = elements.navMenu && elements.navMenu.classList.contains("is-open")
+
+        // Desktop, or while the mobile menu is open: keep the header visible
+        if (!mobileNavQuery.matches || menuOpen) {
+            clearHeaderRevealTimer()
+            setHeaderHidden(false)
+            lastScrollY = window.scrollY
+            return
+        }
+
+        const currentScrollY = window.scrollY
+        const scrollingDown = currentScrollY > lastScrollY
+
+        if (currentScrollY <= HEADER_HIDE_THRESHOLD || !scrollingDown) {
+            setHeaderHidden(false)
+        } else {
+            setHeaderHidden(true)
+        }
+
+        lastScrollY = currentScrollY
+        scheduleHeaderReveal()
     }
 
     /**
@@ -187,6 +235,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleMobileMenu() {
         const isOpen = elements.navMenu.classList.toggle("is-open")
         elements.navToggle.setAttribute("aria-expanded", isOpen)
+
+        // Keep the header visible while the menu is open
+        if (isOpen) {
+            clearHeaderRevealTimer()
+            setHeaderHidden(false)
+        }
 
         // Prevent body scroll when menu is open
         document.body.style.overflow = isOpen ? "hidden" : ""
@@ -593,7 +647,55 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ========================================
-         11. INITIALIZATION
+         11. PRODUCT FLYER POPUP MODAL
+         ========================================
+         Opens the shared image modal from any ".service-popup-link" trigger
+         (used by the product cards that show a per-product flyer).
+      */
+    function initImagePopupModal() {
+        const modal = document.getElementById("imgModal")
+        if (!modal) return
+
+        const popupImage = document.getElementById("popupImage")
+        const closeBtn = document.getElementById("closeBtn")
+
+        function openModal(src) {
+            if (popupImage) {
+                popupImage.src = src
+            }
+            modal.classList.add("is-active")
+        }
+
+        function closeModal() {
+            modal.classList.remove("is-active")
+        }
+
+        document.querySelectorAll(".service-popup-link").forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault()
+                openModal(link.dataset.img)
+            })
+        })
+
+        if (closeBtn) {
+            closeBtn.addEventListener("click", closeModal)
+        }
+
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                closeModal()
+            }
+        })
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && modal.classList.contains("is-active")) {
+                closeModal()
+            }
+        })
+    }
+
+    /* ========================================
+         12. INITIALIZATION
          ========================================
          Set up event listeners and initialize components
       */
@@ -612,6 +714,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 handleStatsAnimation()
             }, 100),
         )
+
+        // Reset the mobile header hide state when crossing the breakpoint
+        const handleBreakpointChange = () => {
+            clearHeaderRevealTimer()
+            setHeaderHidden(false)
+            lastScrollY = window.scrollY
+        }
+        if (typeof mobileNavQuery.addEventListener === "function") {
+            mobileNavQuery.addEventListener("change", handleBreakpointChange)
+        } else if (typeof mobileNavQuery.addListener === "function") {
+            mobileNavQuery.addListener(handleBreakpointChange)
+        }
 
         // Mobile menu toggle
         if (elements.navToggle) {
@@ -632,9 +746,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     smoothScrollTo(href)
                 }
 
-                // if(href.contains("services") && (this.classList.contains("service-option-link") || this.classList.contains("service-card-link"))) {
-                //
-                // }
             })
         })
 
@@ -688,48 +799,56 @@ document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener("keydown", (e) => {
             if (e.key === "Escape") {
                 closeMobileMenu()
-                if (elements.stickyWidget.classList.contains("is-open")) {
+                if (elements.stickyWidget?.classList.contains("is-open")) {
                     elements.stickyWidget.classList.remove("is-open")
                     elements.widgetToggle.setAttribute("aria-expanded", "false")
                 }
             }
         })
 
-        document.getElementById("contact-service").addEventListener("change", () => {
-            document.getElementById("emptyopt").setAttribute("disabled", "true")
-        })
+        // document.getElementById("contact-service").addEventListener("change", () => {
+        //     document.getElementById("emptyopt").setAttribute("disabled", "true")
+        // })
 
         var phoneInput = document.getElementById("contact-phone")
 
-        phoneInput.addEventListener("change", () => {
-            var regex = /^\\d+$/
 
-            phoneInput.value = phoneInput.value.replace(regex, "")
+        if (phoneInput) {
+            phoneInput.addEventListener("change", () => {
+                var regex = /^\\d+$/
+
+                phoneInput.value = phoneInput.value.replace(regex, "")
 //TODO: phone replace letters
-        })
+            })
+        }
 
 
         window.addEventListener("beforeunload", () => {
-            document.getElementById("contact-form").reset()
+            let form = document.getElementById("contact-form")
+            form? form.reset() : null;
 
-            document.getElementById("emptyopt").removeAttribute("disabled")
+            let emptyOpt = document.getElementById("emptyopt")
+            emptyOpt? emptyOpt.removeAttribute("disabled") : null;
         })
 
-        let mobileNavLis = document.querySelectorAll(".nav-item")
+        // Product flyer popup modal
+        initImagePopupModal()
 
-        mobileNavLis.forEach(el => {
-            el.addEventListener("click", (e) => {
-                e.preventDefault()
-                let link = el.querySelector('.nav-link')
-                let href = link.getAttribute("href").toString()
-                if(!href.includes("#")) {
-                    window.location.href = href;
-                } else {
-                    link.click();
-                }
-
-            })
-        })
+        // let mobileNavLis = document.querySelectorAll(".nav-item")
+        //
+        // mobileNavLis.forEach(el => {
+        //     el.addEventListener("click", (e) => {
+        //         e.preventDefault()
+        //         let link = el.querySelector('.nav-link')
+        //         let href = link.getAttribute("href").toString()
+        //         if(!href.includes("#")) {
+        //             window.location.href = href;
+        //         } else {
+        //             link.click();
+        //         }
+        //
+        //     })
+        // })
     }
 
     /**

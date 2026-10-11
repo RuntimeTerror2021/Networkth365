@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO(assets): Replace with real Medicare / senior health imagery. -->
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="600" fill="#222B68"/>
+    <rect width="800" height="600" fill="url(#g)"/>
+    <rect x="8" y="8" width="784" height="584" rx="16" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="12 10"/>
+    <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#1a2255"/>
+            <stop offset="1" stop-color="#2394CB"/>
+        </linearGradient>
+    </defs>
+    <g fill="#ffffff" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">
+        <text x="400" y="282" font-size="44" font-weight="bold">Medicare</text>
+        <text x="400" y="332" font-size="26" font-weight="bold" fill="#a5f3a5">PLACEHOLDER IMAGE</text>
+        <text x="400" y="376" font-size="20" fill="#ffffff" fill-opacity="0.7">src/media/placeholder-medicare.svg</text>
+    </g>
+</svg>
