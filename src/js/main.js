@@ -737,6 +737,21 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener("click", handleNavClick)
         })
 
+        // Make the whole nav row tappable (not just the link text): clicking
+        // anywhere on a nav item forwards the click to its enclosed anchor.
+        // Clicks that already land on the anchor are left untouched to avoid
+        // re-dispatching the same click (which would recurse).
+        document.querySelectorAll(".nav-item").forEach((item) => {
+            item.addEventListener("click", (event) => {
+                if (event.target.closest(".nav-link")) return
+
+                const link = item.querySelector(".nav-link")
+                if (link) {
+                    link.click()
+                }
+            })
+        })
+
         // All anchor links with hash
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
             anchor.addEventListener("click", function (e) {
