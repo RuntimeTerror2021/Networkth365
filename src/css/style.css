@@ -980,7 +980,7 @@ section.partners .container {
     flex-shrink: 0;
     /*background: linear-gradient(white, var(--color-primary), white );*/
     /*background: oklch(from var(--color-primary), l c h / 1.4);*/
-    filter: saturate(.1);
+    /*filter: saturate(.1);*/
 }
 
 .partner-logo {
