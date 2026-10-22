@@ -824,7 +824,7 @@ footer .logo-accent.dark {
     width: 100%;
 }
 
-/* Two-up advisor profiles inside the About section */
+/* Two-up producer profiles inside the About section */
 .about-image--team {
     display: flex;
     flex-wrap: wrap;
@@ -1263,8 +1263,8 @@ section.partners .container {
     color: var(--color-secondary)
 }
 
-/* Per-advisor contact cards - each advisor carries a different license set,
-   so contact details are shown per advisor rather than merged. */
+/* Per-producer contact cards - each producer carries a different license set,
+   so contact details are shown per producer rather than merged. */
 .advisor-contact {
     padding: 0;
 }
